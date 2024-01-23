@@ -1,0 +1,45 @@
+﻿@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@using System.Text.Json
+
+<EditForm Model="@Tamanio" OnValidSubmit="@OnValidSubmit">
+    <div class="form-field mt-2 mb-2">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Nombre</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudTextField @bind-Value="@Tamanio.Nombre" Label="Nombre del sistema" Variant="Variant.Outlined" oninput="this.value=this.value.toUpperCase()"
+                                          Margin="Margin.Dense"></MudTextField>
+                        </div>
+                        <ValidationMessage For="@(() => Tamanio.Nombre)" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Dar de baja</label>
+                <div class="col">
+                    <div class="input-group">
+                        <MudTooltip Text="Si selecciona esta opción dará de baja a la talla correspondiente." Color="Color.Secondary" Placement="Placement.Top">
+                            <MudSwitch @bind-Checked="@Tamanio.Estado" Label="Activo" Color="Color.Success" />
+                        </MudTooltip>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-block btn-success">
+            <i class="oi oi-check "></i>
+            <text style="color:white"></text>
+        </button>
+    </div>
+    <DataAnnotationsValidator />
+</EditForm>
+
+@code {
+
+    [Parameter] public Tamanios Tamanio { get; set; } = new Tamanios();
+
+    [Parameter] public string TextBotonSubmit { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+}

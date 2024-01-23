@@ -1,0 +1,49 @@
+﻿@page "/crear-cliente"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+@inject ISnackbar Snackbar
+@attribute [Authorize(Roles = "admin, empleado")]
+
+<div class="d-flex justify-content-between mb-3">
+    <div>
+        <button @onclick="@Volver" class="btn btn-sm btn-secondary">
+            <i class="oi oi-arrow-circle-left"></i> Volver al listado
+        </button>
+    </div>
+    <div>
+        <h3><b>Nuevo cliente</b></h3>
+    </div>
+</div>
+
+<FormCliente cliente="cliente" TextBotonSubmit="Guardar cliente"
+             OnValidSubmit="@CrearClient" />
+
+@code {
+    public Cliente cliente = new Cliente();
+
+    async Task CrearClient()
+    {
+        var respuesta = await Http.PostAsJsonAsync("api/clientes", cliente);
+
+        if (respuesta.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/lista-clientes");
+            // await JS.InvokeVoidAsync("simple", "¡Éxito!", "Cliente creado", "success");
+            Snackbar.Add("Agregada con éxito", Severity.Success, a =>
+            a.VisibleStateDuration = 200);
+        }
+        else
+        {
+            // await JS.InvokeVoidAsync("simple", "Error",
+            //$"DNI: {cliente.Cedula} ya registrado. ", "error");
+            Snackbar.Add("Ha ocurrido un error", Severity.Error, a =>
+            a.VisibleStateDuration = 200);
+        }
+    }
+
+    void Volver()
+    {
+        NavigationManager.NavigateTo("/lista-clientes");
+    }
+}

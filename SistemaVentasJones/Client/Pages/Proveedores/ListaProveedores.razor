@@ -1,0 +1,212 @@
+﻿@page "/lista-proveedores"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+@attribute [Authorize(Roles = "admin")]
+
+@using System.Text.Json
+
+<MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Create" Color="Color.Success" Size="Size.Medium">
+    <a style="text-decoration:none; color:#fff;"  @onclick="CrearArticulo">Agregar proveedor</a>
+</MudButton>
+
+<div class="d-flex justify-content-between mt-2 mb-2">
+    <div class="btn-group">
+        <a href="/lista-proveedores-bajas" style="background:none; border:none">
+            &nbsp;&nbsp;<b>Dados de baja</b>
+        </a>
+    </div>
+</div>
+@if (Proveedores == null)
+{
+    <div class="d-flex justify-content-center align-items-center" style="height:24rem">
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+}
+else if (Proveedores.Count == 0)
+{
+    <div class="d-flex justify-content-center align-items-center" style="height:24rem">
+        <text>No se encontraron proveedores.</text>
+    </div>
+}
+else
+{
+
+    <MudButtonGroup Color="Color.Primary" Variant="Variant.Outlined">
+        <MudTooltip Text="Exportar esta tabla a excel" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
+            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Custom.FileFormats.FileExcel"
+                   @onclick="ExportarExcel"
+                   Color="Color.Warning">Excel</MudButton>
+        </MudTooltip>
+       
+    </MudButtonGroup>
+    <MudTable Items="@Proveedores" Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Filter="new Func<Proveedores,bool>(FilterFunc1)"
+              @bind-SelectedItem="selectedItem1">
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">Proveedores</MudText>
+            <MudSpacer />
+            <MudTextField @bind-Value="searchString1" Placeholder="Buscar proveedor..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        </ToolBarContent>
+        <HeaderContent>
+            @*<MudTh Style="width:50px;">Nr</MudTh>*@
+            <MudTh>Nombre</MudTh>
+            <MudTh>Teléfono</MudTh>
+            <MudTh>Email</MudTh>
+            <MudTh>Dirección</MudTh>
+            <MudTh>Fecha registro</MudTh>
+            <MudTh Style="width:70px;">Acciones</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            @*<MudTd DataLabel="Id">@context.Id</MudTd>*@
+            <MudTd DataLabel="Nombre">@context.Nombre</MudTd>
+            <MudTd DataLabel="Teléfono">@context.Telefono</MudTd>
+            <MudTd DataLabel="Email">@context.Email</MudTd>
+            <MudTd DataLabel="Dirección">@context.Direccion</MudTd>
+            <MudTd DataLabel="Fecha">@context.Fecha.ToLongDateString()</MudTd>
+            <MudTd>
+                <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small"
+                        @onclick="@(() => NavigationManager.NavigateTo($"/editar-proveedores/{context.Id}"))" />
+            </MudTd>
+
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+
+
+}
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = true;
+    private bool bordered = true;
+    private string searchString1 = "";
+    private Proveedores selectedItem1 = null;
+    private HashSet<Proveedores> selectedItems = new HashSet<Proveedores>();
+
+
+    public List<Proveedores> Proveedores { get; set; } //muestra todos los Categoria
+    Proveedores objMarca = new Proveedores();
+
+    private string NombreArtFiltro = String.Empty; //filtros
+
+    protected bool lista = false;
+    protected bool card = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarProveedores();
+    }
+
+    async Task CargarProveedores()
+    {
+        var httpResponse = await Http.GetAsync($"api/proveedores");
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            Proveedores = JsonSerializer.Deserialize<List<Proveedores>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("error");
+        }
+    }
+
+    void CambiarVista() //  esta parte cambia entre vista de tarjetas o vista de grilla
+    {
+        lista = !lista;
+        card = !card;
+    }
+
+
+    async Task MostrarTodos()
+    {
+        await CargarProveedores();
+    }
+
+    void CrearArticulo()
+    {
+        NavigationManager.NavigateTo("crearproveedores");
+    }
+
+    private async Task Filtrar()
+    {
+        await CargarProveedores();
+    }
+
+    private async Task Limpiar()
+    {
+        NombreArtFiltro = string.Empty;
+        await CargarProveedores();
+    }
+
+    // esta es la funcion de filtrado de MudBlazor
+    private bool FilterFunc1(Proveedores element) => FilterFunc(element, searchString1);
+
+    private bool FilterFunc(Proveedores element, string searchString)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Nombre.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        return false;
+    }
+    
+    
+    private void ExportarExcel()
+    {
+        using (var package = new ExcelPackage())
+        {
+            var worksheet = package.Workbook.Worksheets.Add("Proveedores");
+            worksheet.Cells["A1"].Value = "JONES.";
+            var tableBody = worksheet.Cells["A3:E3"].LoadFromCollection(
+                from f in Proveedores
+                select new { f.Id, f.Nombre, f.Telefono, f.Fecha, f.Estado }, true);
+            using (ExcelRange r = worksheet.Cells["A1:F1"])
+            {
+                r.Merge = true; r.Style.Font.Bold = true;
+                r.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+                worksheet.DefaultColWidth = 60;
+                r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGreen);
+            }
+            worksheet.Cells["A2"].Value = $"Informe de proveedores en existencia {DateTime.Now.ToLongTimeString()}";
+            using (ExcelRange r = worksheet.Cells["A2:F2"])
+            {
+                r.Merge = true;
+                r.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+                worksheet.DefaultColWidth = 60;
+                r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightYellow);
+            }
+    
+
+            var header = worksheet.Cells["A3:F3"];
+            worksheet.DefaultColWidth = 32;
+            tableBody.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+
+            //  esto afecta al cuerpo
+
+            tableBody.Style.Fill.PatternType = ExcelFillStyle.None;
+            // bordes
+            tableBody.Style.Border.BorderAround(ExcelBorderStyle.Hair);
+            worksheet.Cells.Style.Border.BorderAround(ExcelBorderStyle.Hair);
+
+            // fuentes
+            header.Style.Font.Bold = true;
+            header.Style.Font.Color.SetColor(System.Drawing.Color.Black);
+
+            // Este es el encabezado.
+            header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+            header.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightBlue);
+
+            JS.GuardarComo($"Informe_Proveedores_{DateTime.Now.ToShortDateString()}.xlsx", package.GetAsByteArray());
+        }
+    }
+    
+}

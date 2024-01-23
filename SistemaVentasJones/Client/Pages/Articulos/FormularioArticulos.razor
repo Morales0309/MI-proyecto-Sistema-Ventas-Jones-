@@ -1,0 +1,254 @@
+﻿@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+@using System.Text.Json
+
+<EditForm Model="@articulo" OnValidSubmit="@OnValidSubmit">
+    <div class="form-field mt-2 mb-2">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Imagen</label>
+                    <div class="col">
+                        <div class="figure-img">
+                            <img src="@articulo.Url_Imagen" alt="No img"
+                                 style="border-radius:0.5rem; width:110px; height:105px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Nombre</label>
+                    <div class="col">
+                        <div class="input-group">                            
+                            <MudTextField @bind-Value="@articulo.Nombre" Label="Artículo" 
+                             HelperText="Ingrese el nombre del artículo"
+                            Variant="Variant.Outlined" />                           
+                        </div>
+                        <ValidationMessage For="@(() => articulo.Nombre)" />
+                    </div>
+                </div>
+
+
+
+                @*prueba*@
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Categorías</label>
+                    <div class="col">
+                        <div class="input-group">                            
+                            <MudSelect Dense="true" HelperText="Seleccione una de las categorías registradas" T="int" 
+                            Label="Categorías" @bind-Value="@articulo.CategoriaId" Variant="Variant.Outlined">
+                                <MudSelectItem Value="0">Seleccione una categoría</MudSelectItem>
+                                @foreach (var categoria in ListaCategorias)
+                                {                                    
+                                        <MudSelectItem Value="@categoria.Id">@categoria.Nombre</MudSelectItem>
+                                }
+                            </MudSelect>
+                        </div>
+                        <ValidationMessage For="@(() => articulo.CategoriaId)" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Marcas</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudSelect Dense="true" HelperText="Seleccione una de las marcas registradas" T="int"
+                                       Label="Marcas" @bind-Value="@articulo.MarcaId" Variant="Variant.Outlined">
+                                <MudSelectItem Value="0">Seleccione una marca</MudSelectItem>
+                                @foreach (var marcas in ListaMarcas)
+                                {
+                                        <MudSelectItem Value="@marcas.Id">@marcas.Nombre</MudSelectItem>
+                                }
+                            </MudSelect>
+                        </div>
+                        <ValidationMessage For="@(() => articulo.MarcaId)" />
+                    </div>
+                </div>
+
+               
+
+                @*finPrueba*@
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Descripción</label>
+                    <div class="col">
+                        <div class="input-group">                            
+                            <MudTextField @bind-Value="@articulo.Descripcion" Label="Descripcíon"
+                                          oninput="this.value=this.value.toUpperCase()" HelperText="Describa el artículo"
+                                          Variant="Variant.Outlined" Lines="3"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Url Imagen</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudTooltip Text="Ingrese el enlace de la imagen que quiere que se muestre" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">                                
+                                <MudTextField @bind-Value="@articulo.Url_Imagen" Label="URL imagen"
+                                              oninput="this.value=this.value.toUpperCase()" HelperText="Introduce el enlace de la imagen del artículo"
+                                              Variant="Variant.Outlined" />
+                            </MudTooltip>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Código producto</label>
+                    <div class="col">
+                        <div class="input-group">                        
+                            <MudTextField @bind-Value="@articulo.Codigo" Label="Código" Adornment="Adornment.Start" AdornmentText="#A-Z"
+                                          oninput="this.value=this.value.toUpperCase()" HelperText="Ingrese el código del artículo"
+                                          Variant="Variant.Outlined" />
+                        </div>
+                        <ValidationMessage For="@(() => articulo.Codigo)" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Precio de compra</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudNumericField @bind-Value="@articulo.PrecioMayorista" Label="Precio compra" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.AttachMoney"
+                                          oninput="this.value=this.value.toUpperCase()" HelperText="Precio de compra del artículo"
+                                          Variant="Variant.Outlined" Min="0" Step="1" />
+                        </div>
+                        <ValidationMessage For="@(() => articulo.PrecioMayorista)" />
+                    </div>
+                </div>
+
+                @* <div class="form-group row">
+                    <label class="col-4 col-form-label">Porcentaje</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <InputNumber @bind-Value="@porcentaje" @onfocusout="@(() => articulo.CalcularUnitario(porcentaje))" class="form-control" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> *@
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Precio de venta</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudNumericField @bind-Value="@articulo.PrecioUnitario" Label="Precio venta" Min="0" Step="1"
+                                          oninput="this.value=this.value.toUpperCase()" HelperText="Precio de venta del artículo"
+                                          Variant="Variant.Outlined" Adornment="Adornment.Start" AdornmentIcon="@Icons.Filled.AttachMoney"/>
+                        </div>
+                        <ValidationMessage For="@(() => articulo.PrecioUnitario)" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Stock actual</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudNumericField @bind-Value="@articulo.StockActual" Label="Stock actual" Min="0" Step="1"
+                                             oninput="this.value=this.value.toUpperCase()" HelperText="Existencia actual del producto"
+                                             Variant="Variant.Outlined" />
+                        </div>
+                        <ValidationMessage For="@(() => articulo.StockActual)" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Stock mínimo</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudNumericField @bind-Value="@articulo.StockMinimo" Label="Stock mínimo" Min="0" Step="1"
+                                             oninput="this.value=this.value.toUpperCase()" HelperText="Existencia mínima que puede tener el producto"
+                                             Variant="Variant.Outlined" />
+                        </div>
+                        <ValidationMessage For="@(() => articulo.StockMinimo)" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Stock máximo</label>
+                    <div class="col">
+                        <div class="input-group">
+                            <MudNumericField @bind-Value="@articulo.StockMaximo" Label="Stock máximo" Min="0" Step="1"
+                                             oninput="this.value=this.value.toUpperCase()"  HelperText="Máxima cantidad de existencia"
+                                             Variant="Variant.Outlined" />
+                        </div>
+                        <ValidationMessage For="@(() => articulo.StockMaximo)" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-3 col-form-label">Estado</label>
+                    <div class="col">
+                        <MudTooltip Text="Si selecciona esta opción dará de baja al artículo correspondiente."
+                                    Color="Color.Secondary" Placement="Placement.Top">
+                            <MudSwitch @bind-Checked="@articulo.Estado" Label="Está activo?"
+                                       Color="Color.Success" />
+                        </MudTooltip>
+                        <ValidationMessage For="@(() => articulo.Estado)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-block btn-success">
+            <i class="oi oi-check "></i>
+            <text style="color:white"> @TextBotonSubmit</text>
+        </button>
+    </div>
+    <DataAnnotationsValidator />
+</EditForm>
+
+@code {
+    [Parameter] public Articulo articulo { get; set; } = new Articulo();
+    [Parameter] public List<Categoria> ListaCategorias { get; set; } = new List<Categoria>();
+    [Parameter] public List<Marcas> ListaMarcas { get; set; } = new List<Marcas>();    
+    [Parameter] public string TextBotonSubmit { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+
+    public int porcentaje { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarCategoria();
+        await CargarMarcas();
+        
+    }
+
+    async Task CargarCategoria()
+    {
+        //  usando la api que está en el controlador se usa para  llenar el select que está más arriba
+        var httpResponse = await Http.GetAsync("api/cate");
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            ListaCategorias = JsonSerializer.Deserialize<List<Categoria>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("Error - No se obtuvieron las categorías");
+        }
+
+    }
+    // obteniendo las marcas
+    async Task CargarMarcas()
+    {
+        //  usando la api que está en el controlador se usa para  llenar el select que está más arriba
+        var httpResponse = await Http.GetAsync("api/marcas"); //  a través del get se llena la lista con los elementos d ela tabla marcas
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            ListaMarcas = JsonSerializer.Deserialize<List<Marcas>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("Error - No se obtuvieron las marcas");
+        }
+
+    }
+   
+}

@@ -1,0 +1,55 @@
+﻿@page "/editar-ajustes/{idAjustes:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+@attribute [Authorize(Roles = "admin")]
+
+
+<button @onclick="@Volver" class="btn btn-sm btn-secondary">
+    <i class="oi oi-arrow-circle-left"></i> Volver al listado
+</button>
+
+<hr />
+
+<div class="d-flex justify-content-between mb-3">
+    <h3><b>Editar Configuracion</b></h3>   
+</div>
+<FormAjustes TextBotonSubmit="Guardar cambios"
+              OnValidSubmit="@EditarArtic" Configuracion="@Configuracion" />
+@code {
+    Configuracion Configuracion = new Configuracion();
+    [Parameter] public int idAjustes { get; set; }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        Configuracion = await Http.GetFromJsonAsync<Configuracion>($"/api/Configuracion/{idAjustes}");
+    }
+
+    void Volver()
+    {
+        NavigationManager.NavigateTo("/lista-ajustes");
+    }
+
+    async Task EditarArtic()
+    {
+        var confirmacion = await JS.InvokeAsync<bool>("confirmar", "Editar",
+            $"¿Desea editar {Configuracion.NombreSistema}?", "question");
+        if (confirmacion)
+        {
+            var respuesta = await Http.PutAsJsonAsync("/api/Configuracion", Configuracion);
+
+            if (respuesta.IsSuccessStatusCode)
+            {
+                NavigationManager.NavigateTo("/lista-ajustes");
+                await JS.InvokeVoidAsync("simple", "¡Éxito!", "Configuracion editada", "success");
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("simple", "Error",
+                    "No se pudo editar la Configuracion", "error");
+            }
+        }
+    }
+
+   
+}

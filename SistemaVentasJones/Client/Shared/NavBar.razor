@@ -1,0 +1,84 @@
+﻿<MudPaper Width="250px" Class="d-inline-flex py-3" Elevation="0">
+
+
+    <MudNavMenu Rounded="true" Margin="Margin.Dense" Color="Color.Dark" Class="mud-width-full custom-menu">
+        <MudText Typo="Typo.h6" Class="px-4">Sistema ventas Jones</MudText>
+        <MudDivider Class="my-2" />
+
+        @* <MudNavLink Href="/" Icon="@Icons.Filled.Dashboard">Inicio</MudNavLink>*@
+
+        <AuthorizeView Roles="admin">
+            <Authorized>         
+                <MudNavLink Href="/lista-compras" Icon="@Icons.Filled.ShoppingBag">Compras</MudNavLink>
+            </Authorized>
+        </AuthorizeView>
+
+        
+
+
+       <AuthorizeView Roles="admin">
+            <Authorized>
+                <MudNavGroup Title="Catálogos" Icon="@Icons.Filled.AccountTree" Expanded="true">
+                    <MudNavLink Href="/lista-marcas">Marcas</MudNavLink>                   
+                    <MudNavLink Href="/lista-tamanios">Tamaños</MudNavLink>
+                    <MudNavLink Href="/indexcategoria">Categorías</MudNavLink>
+                    <MudNavLink Color="Color.Primary" Href="/lista-clientes">Clientes</MudNavLink>
+                    <MudNavLink Href="/lista-proveedores">Proveedores</MudNavLink>
+                </MudNavGroup>
+            </Authorized>
+        </AuthorizeView>
+
+        <MudNavLink Href="/lista-articulos" Icon="@Icons.Filled.AddShoppingCart">Administracion de productos</MudNavLink>
+                   
+            <MudNavLink Href="/lista-ventas" Icon="@Icons.Filled.ShoppingBag">Ventas</MudNavLink>
+        @*<MudNavLink Href="/lista-devoluciones">Devoluciones</MudNavLink>*@
+        
+        <AuthorizeView Roles="admin">
+            <Authorized>
+                @*<MudNavLink Icon="@Icons.Filled.AddShoppingCart"  Href="authentication/register">Registrarse</MudNavLink>*@
+            </Authorized>
+        </AuthorizeView>
+
+        <AuthorizeView Roles="admin">
+            <Authorized>
+                <MudNavGroup Title="Ajustes" Icon="@Icons.Filled.Settings" Expanded="true">
+                    <MudNavLink Href="/lista-usuarios">Usuarios</MudNavLink>
+                    <MudNavLink Href="/roles">Roles</MudNavLink>
+                    <MudNavLink Href="/lista-ajustes">Información de propietario</MudNavLink>
+                    <MudNavLink Href="/authentication/register">Registro </MudNavLink>
+                </MudNavGroup>
+            </Authorized>
+        </AuthorizeView>
+
+    </MudNavMenu>
+</MudPaper>
+
+<style>
+    .custom-menu {
+        background-color: #001f3f; /* Dark blue color, you can change this */
+        color: #fff; /* Text color */
+        /* Add any additional styles as needed */
+    }
+
+        .custom-menu a {
+            color: #fff; /* Link color */
+            transition: background-color 0.3s; /* Agregamos una transición suave al color de fondo */
+        }
+
+            .custom-menu a:hover {
+                background-color: #003366; /* Darker blue on hover, you can change this */
+            }
+
+            .custom-menu a:active {
+                background-color: #8B0000; /* Dark red on click, you can change this */
+            }
+
+    .mud-avatar-img {
+        width: 60px;
+        height: 60px;
+    }
+</style>
+@code {
+    [Parameter]
+    public bool SideBarOpen { get; set; }   
+}

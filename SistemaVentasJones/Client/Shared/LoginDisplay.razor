@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+<AuthorizeView>
+    <Authorized>
+        <style>
+            #usuario {
+                color: #fff;
+                margin-right: 1rem;
+                border-radius: 0.2rem;
+                font-weight: 500;
+            }
+
+                #usuario:hover {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                #usuario:active {
+                    color: gold;
+                }
+        </style>
+        
+        <a class="user" href="authentication/profile" id="usuario">
+            @context.User.Identity.Name
+        </a>
+        <button class="btn btn-sm btn-danger" @onclick="BeginSignOut"><i class="oi oi-account-logout"></i>&nbsp; Salir</button>
+    </Authorized>
+    <NotAuthorized>
+       @* <a class="btn btn-sm btn-danger" href="authentication/register">Registrarse</a>&nbsp;&nbsp;*@
+        <a class="btn btn-sm btn-danger" href="authentication/login">Iniciar sesión</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
+    }
+}

@@ -1,0 +1,218 @@
+﻿@page "/"
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sistema de ventas JONES</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+
+<div id="index">
+    @*<h2><b>Le damos la bienvenida</b></h2>*@
+
+
+
+    <AuthorizeView>
+        <Authorized>
+            <DashboardPowerBi />
+        </Authorized>
+        <NotAuthorized>
+
+            <div class="jumbotron jumbotron-odi-hero bg-primary">
+                <div class="jumbotron-overlay ">
+                    <div class="container jumbotron-padding  text-center">
+                        <h1 class="display-4">Bienvenido al Sistema Jones!</h1>
+                        <p>
+                            <a href="/authentication/login" class="btn btn-lg btn-danger btn-circle my-4 mr-3">Iniciar sesión</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container mt-5" id="about">
+                <h1 class="text-center py-4 text-dark">Características </h1>
+
+                <div class="row text-center mt-5" >
+                    <div class="col-md-3">
+                        <div class="card shadow bg-light text-dark">
+                            <div class="card-body">
+                                <i class="fas fa-rocket card-img-top fa-4x text-primary" aria-hidden="true"></i>
+                                <h4 class="card-title">Rápido de usar</h4>
+                                <p class="card-text">El sistema responde con rapidez en el uso diario.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card shadow bg-light text-dark">
+                            <div class="card-body">
+                                <i class="fas fa-feather card-img-top fa-4x text-primary" aria-hidden="true"></i>
+                                <h4 class="card-title">Peso ligero</h4>
+                                <p class="card-text">Como sistema web, no requiere hardware potente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card shadow bg-light text-dark">
+                            <div class="card-body">
+                                <i class="fa fa-tablet card-img-top fa-4x text-primary" aria-hidden="true"></i>
+                                <h4 class="card-title">Responsive</h4>
+                                <p class="card-text">Adaptable a diferentes dispositivos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card shadow bg-light text-dark">
+                            <div class="card-body">
+                                <i class="fas fa-charging-station card-img-top fa-4x text-primary" aria-hidden="true"></i>
+                                <h4 class="card-title">Fácil de utilizar</h4>
+                                <p class="card-text">Diseño intuitivo para un uso diario sencillo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-dark text-light py-5 mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <h3>Tienda Jones</h3>
+                            <small class="d-block text-muted">&copy; 2024</small>
+                            <small class="text-muted">Todos los derechos reservados.</small>
+                        </div>
+                        <!--end of col-->
+                        <div class="col-12 col-md-9">
+
+                            <div class="row no-gutters">
+                                <div class="col-6 col-lg-3">
+                                    <h5>Features</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="text-muted">Rápido de usar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">Peso ligero</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted"> Responsive</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">Fácil de utilizar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                                <div class="col-6 col-lg-3">
+                                    <h5>Desarrolado con:</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="text-muted">Blazor WebAssembly</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">NetCore</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">SQL Server</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">Entity framework</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                                <div class="col-6 col-lg-3">
+                                    <h5>Creado por</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="text-muted">Luis Morales</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">Lesdy Reyes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">Pedro Munguia</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                                <div class="col-6 col-lg-3">
+                                    <h5>About</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#" class="text-muted">Tienda Accesorios Jones</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">Contiguo a la empresa a cruz lorena</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="text-muted">Jinotepe, Carazo</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!--end of col-->
+                            </div>
+                            <!--end of row-->
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </footer>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+
+
+
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: whitesmoke; /* Dark background color */
+        color: #fff; /* Light text color */
+    }
+
+    .jumbotron {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        background-color: ; /* Deep red wine color for card background */
+    }
+
+    .card-body {
+        padding: 20px;
+        color: #5e2129; /* Light text color for card content */
+        border-radius: 10px;
+    }
+
+    .btn-circle {
+        border-radius: 30px;
+    }
+</style>
+
+@code {
+}
+
+
+
+

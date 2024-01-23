@@ -1,0 +1,205 @@
+﻿@page "/lista-tamanios"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+@attribute [Authorize(Roles = "admin")]
+
+@using System.Text.Json
+
+<MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Create" Color="Color.Success" Size="Size.Medium">
+    <a style="text-decoration:none; color:#fff;" @onclick="CrearArticulo">Agregar Tamaños</a>
+</MudButton>
+
+
+<div class="d-flex justify-content-between mt-2 mb-2">
+    <div class="btn-group">
+        <a href="/lista-tamaños-bajas" style="background:none; border:none">
+            &nbsp;&nbsp;<b>Descontinuados</b>
+        </a>
+    </div>
+</div>
+
+@if (Tamanios == null)
+{
+        <div class="d-flex justify-content-center align-items-center" style="height:24rem">
+            <div class="spinner-grow text-success" role="status">
+                <span class="sr-only">Cargando...</span>
+                <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+            </div>
+        </div>
+}
+else if (Tamanios.Count == 0)
+{
+        <div class="d-flex justify-content-center align-items-center" style="height:24rem">
+            <text>No se encontraron tamaños.</text>
+        </div>
+}
+else
+{
+
+        <MudButtonGroup Color="Color.Primary" Variant="Variant.Outlined">
+            <MudTooltip Text="Exportar esta tabla a excel" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
+                <MudButton Variant="Variant.Filled" StartIcon="@Icons.Custom.FileFormats.FileExcel"
+                   @onclick="ExportarExcel"
+                   Color="Color.Warning">Excel</MudButton>
+            </MudTooltip>
+
+        </MudButtonGroup>
+        <MudTable Items="@Tamanios" Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Filter="new Func<Tamanios,bool>(FilterFunc1)"
+              @bind-SelectedItem="selectedItem1">
+            <ToolBarContent>
+                <MudText Typo="Typo.h6">Tamaños</MudText>
+                <MudSpacer />
+            <MudTextField @bind-Value="searchString1" Placeholder="Buscar tamaños..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+            </ToolBarContent>
+            <HeaderContent>            
+                <MudTh>Nombre</MudTh>
+                <MudTh>Fecha registro</MudTh>
+                <MudTh Style="width:50px;">Acciones</MudTh>
+            </HeaderContent>
+            <RowTemplate>            
+                <MudTd DataLabel="Nombre">@context.Nombre</MudTd>
+                <MudTd DataLabel="Fecha">@context.Fecha.ToLongDateString()</MudTd>
+                <MudTd>
+                    <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small"
+                        @onclick="@(() => NavigationManager.NavigateTo($"/editar-tamanio/{context.Id}"))" />
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager />
+            </PagerContent>
+        </MudTable>
+
+
+}
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = true;
+    private bool bordered = true;
+    private string searchString1 = "";
+    private Tamanios selectedItem1 = null;
+    private HashSet<Tamanios> selectedItems = new HashSet<Tamanios>();
+
+
+    public List<Tamanios> Tamanios { get; set; } //muestra todos los Categoria
+    Tamanios objMarca = new Tamanios();
+
+    private string NombreArtFiltro = String.Empty; //filtros
+
+    protected bool lista = false;
+    protected bool card = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarTamanios();
+    }
+
+    async Task CargarTamanios()
+    {
+        var httpResponse = await Http.GetAsync($"api/tamanios");
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            Tamanios = JsonSerializer.Deserialize<List<Tamanios>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("Error");
+        }
+    }
+
+    void CambiarVista() //  esta parte cambia entre vista de tarjetas o vista de grilla
+    {
+        lista = !lista;
+        card = !card;
+    }
+
+
+    async Task MostrarTodos()
+    {
+        await CargarTamanios();
+    }
+
+    void CrearArticulo()
+    {
+        NavigationManager.NavigateTo("creartamanios");
+    }
+
+    private async Task Filtrar()
+    {
+        await CargarTamanios();
+    }
+
+    private async Task Limpiar()
+    {
+        NombreArtFiltro = string.Empty;
+        await CargarTamanios();
+    }
+
+    // esta es la funcion de filtrado de MudBlazor
+    private bool FilterFunc1(Tamanios element) => FilterFunc(element, searchString1);
+
+    private bool FilterFunc(Tamanios element, string searchString)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Nombre.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        return false;
+    }
+
+    // exportar a excel 
+
+    private void ExportarExcel()
+    {
+        using (var package = new ExcelPackage())
+        {
+            var worksheet = package.Workbook.Worksheets.Add("Tamanios");
+            worksheet.Cells["A1"].Value = "AC Jones.";
+            var tableBody = worksheet.Cells["A3:D3"].LoadFromCollection(
+                from f in Tamanios
+                select new { f.Id, f.Nombre, f.Estado }, true);
+            using (ExcelRange r = worksheet.Cells["A1:C1"])
+            {
+                r.Merge = true; r.Style.Font.Bold = true;
+                r.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+                worksheet.DefaultColWidth = 60;
+                r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGreen);
+            }
+            worksheet.Cells["A2"].Value = $"Informe de tamanios en existencia {DateTime.Now.ToLongTimeString()}";
+            using (ExcelRange r = worksheet.Cells["A2:C2"])
+            {
+                r.Merge = true;
+                r.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+                worksheet.DefaultColWidth = 60;
+                r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightYellow);
+            }
+
+
+            var header = worksheet.Cells["A3:C3"];
+            worksheet.DefaultColWidth = 32;
+            tableBody.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+
+            //  esto afecta al cuerpo
+
+            tableBody.Style.Fill.PatternType = ExcelFillStyle.None;
+            // bordes
+            tableBody.Style.Border.BorderAround(ExcelBorderStyle.Hair);
+            worksheet.Cells.Style.Border.BorderAround(ExcelBorderStyle.Hair);
+
+            // fuentes
+            header.Style.Font.Bold = true;
+            header.Style.Font.Color.SetColor(System.Drawing.Color.Black);
+
+            // Este es el encabezado.
+            header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+            header.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightBlue);
+
+            JS.GuardarComo($"Informe_Tamanios_{DateTime.Now.ToShortDateString()}.xlsx", package.GetAsByteArray());
+        }
+    }
+}

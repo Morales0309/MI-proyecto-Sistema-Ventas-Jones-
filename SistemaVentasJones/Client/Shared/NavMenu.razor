@@ -1,0 +1,105 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="#" style="color:darkblue">
+        <img src="~/img/LogoDefinitivo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo jones">
+        <b>Sistema Jones</b>
+    </a>
+
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Inicio
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/estadisticas" Match="NavLinkMatch.All">
+                <span class="oi oi-bar-chart" aria-hidden="true"></span> Estadisticas
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-ventas" Match="NavLinkMatch.All">
+                <span class="oi oi-cart" aria-hidden="true"></span> Ventas
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-articulos" Match="NavLinkMatch.All">
+                <span class="oi oi-list" aria-hidden="true"></span> Artículos
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="indexcategoria" Match="NavLinkMatch.All">
+                <span class="oi oi-list" aria-hidden="true"></span> Categorías
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-tallas" Match="NavLinkMatch.All">
+                <span class="oi oi-list" aria-hidden="true"></span> Tallas
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-tamanios" Match="NavLinkMatch.All">
+                <span class="oi oi-list" aria-hidden="true"></span> Tamaños
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-proveedores" Match="NavLinkMatch.All">
+                <span class="oi oi-list" aria-hidden="true"></span> Proveedores
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-marcas" Match="NavLinkMatch.All">
+                <span class="oi oi-list" aria-hidden="true"></span> Marcas
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-clientes" Match="NavLinkMatch.All">
+                <span class="oi oi-people" aria-hidden="true"></span> Clientes
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-compras" Match="NavLinkMatch.All">
+                <span class="oi oi-cart" aria-hidden="true"></span> Compras
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-pedidos" Match="NavLinkMatch.All">
+                <span class="oi oi-task" aria-hidden="true"></span> Pedidos
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-pagos" Match="NavLinkMatch.All">
+                <span class="oi oi-dollar" aria-hidden="true"></span> Pagos
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="roles" Match="NavLinkMatch.All">
+                <span class="oi oi-cog" aria-hidden="true"></span> Roles
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-ajustes" Match="NavLinkMatch.All">
+                <span class="oi oi-cog" aria-hidden="true"></span> Ajustes
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

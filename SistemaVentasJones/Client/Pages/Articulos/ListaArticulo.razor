@@ -1,0 +1,470 @@
+﻿@page "/lista-articulos"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+@inject IDialogService DialogService
+@attribute [Authorize(Roles = "admin, empleado")]
+
+@using System.Text.Json
+
+<div class="d-flex position-sticky justify-content-between">
+    <AuthorizeView Roles="admin">
+        <Authorized>
+            <div class="btn-group mr-2">
+                <button @onclick="CrearArticulo" class="btn btn-success"><i class="oi oi-plus"></i> AGREGAR ARTÍCULO</button>
+            </div>
+        </Authorized>
+    </AuthorizeView>
+
+    <div class="row">
+        <div class="col-3">
+            <select class="form-control" @bind="MarcaIdFiltro" @onblur="Filtrar">
+                <option value="0">--Seleccione una marca--</option>
+                @foreach (var item in ListaMarcas)
+                {
+                    <option value="@item.Id">@item.Nombre</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-3">
+            <select class="form-control" @bind="CategoriaIdFiltro" @onblur="Filtrar">
+                <option value="0">--Seleccione una categoría--</option>
+                @foreach (var item in ListaCategorias)
+                {
+                    <option value="@item.Id">@item.Nombre</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-3">
+            <select class="form-control" @bind="TamanioIdFiltro" @onblur="Filtrar">
+                <option value="0">--Seleccione un tamaño--</option>
+                @foreach (var item in ListaTamanios)
+                {
+                    <option value="@item.Id">@item.Nombre</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-3">
+            <button @onclick="LimpiarTodo" class="btn btn-danger" type="button"><i class="oi oi-delete"></i></button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="d-flex justify-content-between mt-2 mb-2">
+    <div class="btn-group">
+        <button @onclick="MostrarTodos" style="background:none;border:none">
+            &nbsp;&nbsp;<b>Ver todos </b>&nbsp;&nbsp;
+        </button>
+        <button @onclick="MostrarStockBajo" style="background:none;border:none">
+            &nbsp;&nbsp;<b>Stock bajo  </b>
+        </button>
+
+        <a href="/lista-articulos-bajas" style="background:none;border:none">
+            &nbsp;&nbsp;<b> Dados de baja</b> &nbsp;&nbsp;
+        </a>
+    </div>
+
+    <div class="btn-group">
+        <button @onclick="CambiarVista" style="background:none; border: none">
+            <b>Cambiar vista</b>
+        </button>
+    </div>
+</div>
+
+@if (articulo == null)
+{
+    <div class="d-flex justify-content-center align-items-center" style="height:24rem">
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+}
+else if (articulo.Count == 0)
+{
+    <div class="d-flex justify-content-center align-items-center" style="height:24rem">
+        <text>No se encontraron artículos registrados.</text>
+    </div>
+}
+else
+{    
+    <MudButtonGroup Color="Color.Primary" Variant="Variant.Outlined">
+        <MudTooltip Text="Exportar esta tabla a excel" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
+            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Custom.FileFormats.FileExcel"
+                   @onclick="ExportarExcel"
+                   Color="Color.Warning">Excel</MudButton>
+        </MudTooltip>
+
+    </MudButtonGroup>
+    <div class="card-columns" hidden="@lista">
+        @foreach (var articulo in articulo)
+        {
+            <a href="/editar-articulo/@articulo.Id" style="color: inherit">
+                <div class="card">
+                    @if (articulo.Url_Imagen == null || articulo.Url_Imagen == "")
+                    {
+                        <img class="card-img-top" src="img/noimage.png" alt="Imagen de producto">
+                    }
+                    else
+                    {
+                        <img class="card-img-top" src="@articulo.Url_Imagen" alt="Imagen de producto">
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <b>@articulo.Nombre</b>
+                        </h5>
+                        <p class="card-subtitle">
+                            @articulo.Categorias
+                        </p>
+                        <p class="card-text">
+                            PRECIO: <b>C$@articulo.PrecioUnitario</b>
+                            <br />
+                            @if (articulo.StockActual < articulo.StockMinimo)
+                            {
+                                <b style="color:red; font-weight:700">STOCK BAJO: @articulo.StockActual</b>
+                            }
+                            else if (articulo.StockActual > articulo.StockMaximo)
+                            {
+                                <b style="color:#9C27B0">STOCK EXCEDIDO: @articulo.StockActual</b>
+                            }
+                            else
+                            {
+                                <b style="color:green">STOCK: @articulo.StockActual</b>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    <div hidden="@card">
+        <MudTable Items="@articulo" Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Filter="new Func<Articulo,bool>(FilterFunc1)"
+              @bind-SelectedItem="selectedItem1">
+            <ToolBarContent>
+                <MudText Typo="Typo.h6">Artículos</MudText>
+                <MudSpacer />
+                <MudTextField @bind-Value="searchString1" Placeholder="Buscar..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+            </ToolBarContent>
+            <HeaderContent>
+                <MudTh Style="width:70px;">Imagen</MudTh>
+                <MudTh>Nombre del artículo</MudTh>
+                <MudTh>Descripción</MudTh>                
+                <MudTh>Marcas</MudTh>
+                <MudTh>Tamanios</MudTh>
+                <MudTh>Código</MudTh>
+                <MudTh><MudTableSortLabel SortBy="new Func<Articulo, object>(x=>x.PrecioUnitario)">Precio</MudTableSortLabel></MudTh>
+                @*<MudTh>Fecha alta</MudTh>*@
+                <MudTh Style="width:100px;">Stock</MudTh>
+                <AuthorizeView Roles="admin">
+                    <Authorized>
+                        <MudTh Style="width:50px;">Acciones</MudTh>
+                    </Authorized>
+                </AuthorizeView>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Imagen"><img src="@context.Url_Imagen" width="70" /></MudTd>
+                <MudTd DataLabel="Nombre">@context.Nombre</MudTd>
+                <MudTd DataLabel="Descripción">@context.Descripcion</MudTd>
+                <MudTd DataLabel="Marcas">@GetMarcaName(context.MarcaId)</MudTd>
+                <MudTd DataLabel="Tamanios">@GetTamanioName(context.TamanioId)</MudTd>
+                <MudTd Style="text-transform:uppercase;" DataLabel="Código">@context.Codigo</MudTd>
+                <MudTd DataLabel="Precio">C$ @Math.Round(context.PrecioUnitario,2)</MudTd>
+                @*<MudTd DataLabel="Fecha">@context.Ultima_Modificación.ToLongDateString()</MudTd>*@
+                <MudTd>
+                    @if (context.StockActual < context.StockMinimo)
+                    {
+                        <div class="chip chip-low">@context.StockActual</div>
+                    }
+                    else if (context.StockActual > context.StockMaximo)
+                    {
+                        @* <MudTd class="chip chip-ex" DataLabel="Stock excedido"> @context.StockActual</MudTd> *@
+                        <div class="chip chip-ex">@context.StockActual</div>
+                    }
+                    else
+                    {
+                        @* <b><MudTd class="chip chip-normal" DataLabel="Stock"> @context.StockActual</MudTd></b> *@
+                        <div class="chip chip-normal">@context.StockActual</div>
+                    }
+                </MudTd>
+                <AuthorizeView Roles="admin">
+                    <Authorized Context="contexto">
+                        <MudTd>
+                            <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small"
+                                @onclick="@(() => NavigationManager.NavigateTo($"/editar-articulo/{context.Id}"))" />
+                        </MudTd>
+                    </Authorized>
+                </AuthorizeView>
+
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager />
+            </PagerContent>
+        </MudTable>
+    </div>
+
+}
+
+@code {
+    public List<Articulo> articulo { get; set; } //muestra todos los articulos
+    public List<Categoria> ListaCategorias { get; set; } = new List<Categoria>();
+    public List<Marcas> ListaMarcas { get; set; } = new List<Marcas>();
+    public List<Tamanios> ListaTamanios { get; set; } = new List<Tamanios>();
+
+    private decimal PrecioMaximo;
+
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = true;
+    private bool bordered = true;
+    private string searchString1 = "";
+    private Articulo selectedItem1 = null;
+    private HashSet<Articulo> selectedItems = new HashSet<Articulo>();
+
+    private string NombreArtFiltro = String.Empty; //filtros
+    private string MarcaIdFiltro = String.Empty; //filtros
+    private string TallaIdFiltro = String.Empty; //filtros
+    private string TamanioIdFiltro = String.Empty; //filtros
+    private string CategoriaIdFiltro = String.Empty; //filtros
+
+    protected bool lista = true;
+    protected bool card = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CargarArticulos();
+        await CargarMarcas();
+        await CargarCategorias();
+        await CargarTamanio();
+    }
+
+
+
+    async Task CargarArticulos()
+    {
+        var httpResponse = await Http.GetAsync($"api/articulos/filtrodos?nombre={NombreArtFiltro}&marcaId={MarcaIdFiltro}&tallaId={TallaIdFiltro}&categoriaId={CategoriaIdFiltro}");
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            articulo = JsonSerializer.Deserialize<List<Articulo>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("Error obteniendo los articulos filtrados");
+        }
+    }
+
+    async Task CargarTamanio()
+    {
+        var httpResponse = await Http.GetAsync($"api/tamanios");
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            ListaTamanios = JsonSerializer.Deserialize<List<Tamanios>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("Error obteniendo el tamanio");
+        }
+    }
+
+    async Task CargarCategorias()
+    {
+        var httpResponse = await Http.GetAsync($"api/cate");
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            ListaCategorias = JsonSerializer.Deserialize<List<Categoria>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("Error obteniendo la categoria");
+        }
+    }
+
+    async Task CargarMarcas()
+    {
+        var httpResponse = await Http.GetAsync($"api/marcas");
+        if (httpResponse.IsSuccessStatusCode)
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            ListaMarcas = JsonSerializer.Deserialize<List<Marcas>>(responseString,
+                new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+        else
+        {
+            Console.WriteLine("error");
+        }
+    }
+
+    public string GetMarcaName(int marcaName)
+    {
+        // Obtener el nombre de la talla correspondiente utilizando el ID de talla de la lista.
+        var marca = ListaMarcas.FirstOrDefault(x => x.Id == marcaName);
+        return marca != null ? marca.Nombre : "N/A";
+    }
+
+    public string GetTamanioName(int tamanioName)
+    {
+        // Obtener el nombre de la talla correspondiente utilizando el ID de talla de la lista.
+        var tamanio = ListaTamanios.FirstOrDefault(x => x.Id == tamanioName);
+        return tamanio != null ? tamanio.Nombre : "N/A";
+    }
+
+
+    void CambiarVista()
+    {
+        lista = !lista;
+        card = !card;
+    }
+
+    void MostrarStockBajo()
+    {
+        articulo = articulo.Where(x => x.StockActual < x.StockMinimo).ToList();
+    }
+
+
+    private string busqueda = "";
+
+    void PorMarca()
+    {
+        articulo = articulo.Where(x => x.Marca.Nombre == busqueda).ToList();
+    }
+
+    async Task MostrarTodos()
+    {
+        await CargarArticulos();
+    }
+
+    void CrearArticulo()
+    {
+        NavigationManager.NavigateTo("crear-articulo");
+    }
+
+    private async Task Filtrar()
+    {
+        await CargarArticulos();
+    }
+    private async Task Filtrar2()
+    {
+        await CargarMarcas();
+    }
+
+
+    private async Task LimpiarTodo()
+    {
+        NombreArtFiltro = string.Empty;
+        CategoriaIdFiltro = string.Empty;
+        MarcaIdFiltro = string.Empty;
+        TallaIdFiltro = string.Empty;
+        TamanioIdFiltro = string.Empty;
+        await CargarArticulos();
+    }
+
+
+
+
+    private async Task Limpiar()
+    {
+        NombreArtFiltro = string.Empty;
+        await CargarArticulos();
+    }
+    private async Task LimpiarMarcas()
+    {
+        MarcaIdFiltro = string.Empty;
+        await CargarArticulos();
+    }
+    private async Task LimpiarTalla()
+    {
+        TallaIdFiltro = string.Empty;
+        await CargarArticulos();
+    }
+    private async Task LimpiarCategoria()
+    {
+        CategoriaIdFiltro = string.Empty;
+        await CargarArticulos();
+    }
+    private async Task LimpiarTamanio()
+    {
+        TamanioIdFiltro = string.Empty;
+        await CargarTamanio();
+    }
+
+    // esta es la funcion de filtrado de MudBlazor
+    private bool FilterFunc1(Articulo element) => FilterFunc(element, searchString1);
+
+    private bool FilterFunc(Articulo element, string searchString)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Nombre.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if (element.Codigo.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+
+        return false;
+    }
+
+
+
+    private void ExportarExcel()
+    {
+        using (var package = new ExcelPackage())
+        {
+            var worksheet = package.Workbook.Worksheets.Add("Artículos");
+            worksheet.Cells["A1"].Value = "ACJones.";
+            var tableBody = worksheet.Cells["A3:E3"].LoadFromCollection(
+                from f in articulo
+                select new { f.Id, f.Nombre, f.Descripcion, f.Codigo, f.PrecioMayorista, f.PrecioUnitario, f.Estado }, true);
+            using (ExcelRange r = worksheet.Cells["A1:H1"])
+            {
+                r.Merge = true; r.Style.Font.Bold = true;
+                r.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+                worksheet.DefaultColWidth = 60;
+                r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightGreen);
+            }
+            worksheet.Cells["A2"].Value = $"Informe de artículos en existencia {DateTime.Now.ToLongTimeString()}";
+            using (ExcelRange r = worksheet.Cells["A2:H2"])
+            {
+                r.Merge = true;
+                r.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.CenterContinuous;
+                worksheet.DefaultColWidth = 60;
+                r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightYellow);
+            }
+
+
+            var header = worksheet.Cells["A3:H3"];
+            worksheet.DefaultColWidth = 32;
+            tableBody.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+
+            //  esto afecta al cuerpo
+
+            tableBody.Style.Fill.PatternType = ExcelFillStyle.None;
+            // bordes
+            tableBody.Style.Border.BorderAround(ExcelBorderStyle.Hair);
+            worksheet.Cells.Style.Border.BorderAround(ExcelBorderStyle.Hair);
+
+            // fuentes
+            header.Style.Font.Bold = true;
+            header.Style.Font.Color.SetColor(System.Drawing.Color.Black);
+
+            // Este es el encabezado.
+            header.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+            header.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightBlue);
+
+
+            JS.GuardarComo($"Informe_Artículos_{DateTime.Now.ToShortDateString()}.xlsx", package.GetAsByteArray());
+        }
+    }
+}
