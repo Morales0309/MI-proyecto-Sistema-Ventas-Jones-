@@ -218,8 +218,6 @@ using Microsoft.JSInterop;
     }
 
 
-
-
     void Volver()
     {
         NavigationManager.NavigateTo("/lista-ventas");

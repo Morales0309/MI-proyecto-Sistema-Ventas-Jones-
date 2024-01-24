@@ -14,7 +14,7 @@ using System.Security.Cryptography.X509Certificates;
 using IdentityServer4.Extensions;
 
 namespace SistemaVentasJones.Server.Controllers
-{  
+{
     [Route("api/[controller]")]
     [ApiController]
     [Authorize(Roles = "admin, empleado")]
@@ -93,11 +93,11 @@ namespace SistemaVentasJones.Server.Controllers
                 {
 
                     venta.Numero = 1;
-                    
+
                 }
                 else
                 {
-                   
+
                     venta.Numero = context.Ventas.Max(x => x.Numero + 1); //  funcion para obtener el numero de factura, que debe de ser un numero consecutivo y que no se repita jamas                    
                 }
 
@@ -105,9 +105,9 @@ namespace SistemaVentasJones.Server.Controllers
 
                 await context.SaveChangesAsync();
 
-         
+
                 await GuardarEnCaja(venta);
-                await DecrementaStock(venta);                
+                await DecrementaStock(venta);
             }
             catch (DbUpdateException)
             {
@@ -121,7 +121,7 @@ namespace SistemaVentasJones.Server.Controllers
                 }
             }
             return venta.Id;
-        }       
+        }
 
         // DELETE: api/ventas/5  
         [HttpDelete("{id}")]
@@ -132,7 +132,7 @@ namespace SistemaVentasJones.Server.Controllers
                 .FirstAsync(x => x.Id == id);
 
             if (venta != null)
-            {               
+            {
                 await IncrementaStock(venta);
 
                 context.Ventas.Remove(venta);
@@ -178,14 +178,14 @@ namespace SistemaVentasJones.Server.Controllers
         }
 
         private async Task GuardarEnCaja(Venta venta)
-        {           
+        {
             CajaController cajaController = new CajaController(context);
             Caja cajas = new Caja()
             {
                 // campo de caja |||| campo de venta correspondiente
                 IdVenta = venta.Id,
                 Fecha = venta.Fecha,
-                Ingresos = Convert.ToDecimal(venta.Total),                
+                Ingresos = Convert.ToDecimal(venta.Total),
             };
             await cajaController.Post(cajas);
         }
