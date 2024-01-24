@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "YsaGtxs/4XV1EXRzoBEx+ddHCRi5ryR+GTc92PUwXq9ey7Tkg0gH4Yk4RGvuHFNKnn2wIciyNYmWbwdPopE6jA==",
+  "dgSpecHash": "ydBgzLfXyf6i+j6HIZn9lVHOo8tLFUcLlbAE6KO/Riks+LJXwDXPRKibaD7eSXtJgrivSgebvd+s90PnHthG8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
+  "projectFilePath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.7\\microsoft.aspnetcore.cryptography.internal.5.0.7.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.7\\microsoft.aspnetcore.cryptography.keyderivation.5.0.7.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.7\\microsoft.extensions.identity.core.5.0.7.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.7\\microsoft.extensions.identity.stores.5.0.7.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.7\\microsoft.aspnetcore.cryptography.internal.5.0.7.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.7\\microsoft.aspnetcore.cryptography.keyderivation.5.0.7.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.7\\microsoft.extensions.identity.core.5.0.7.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.7\\microsoft.extensions.identity.stores.5.0.7.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\ender\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

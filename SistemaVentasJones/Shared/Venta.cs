@@ -32,7 +32,6 @@ namespace SistemaVentasJones.Shared
         [Column(TypeName = "decimal(10,2)")]
         [Range(1, double.MaxValue, ErrorMessage = "Valor inválido")]
         public decimal Total { get; set; }
-        public decimal ValorDolares { get; set; } 
         #endregion
     }
 

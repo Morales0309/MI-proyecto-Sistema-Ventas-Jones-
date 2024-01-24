@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj": {}
+    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {
+    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
+        "projectUniqueName": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
         "projectName": "SistemaVentasJones.Client",
-        "projectPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
-        "packagesPath": "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Client\\obj\\",
+        "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
+        "packagesPath": "C:\\Users\\ender\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo i5 12va Gen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ender\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
-                "projectPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj"
+              "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
+                "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj"
               }
             }
           }
@@ -113,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -122,21 +117,17 @@
         }
       }
     },
-    "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj": {
+    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
+        "projectUniqueName": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
         "projectName": "SistemaVentasJones.Server",
-        "projectPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
-        "packagesPath": "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Server\\obj\\",
+        "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
+        "packagesPath": "C:\\Users\\ender\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo i5 12va Gen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ender\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,19 +135,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {
-                "projectPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj"
+              "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {
+                "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj"
               },
-              "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
-                "projectPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj"
+              "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
+                "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj"
               }
             }
           }
@@ -233,25 +222,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
+    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
         "projectName": "SistemaVentasJones.Shared",
-        "projectPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
-        "packagesPath": "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Jones\\SistemaVentasJones\\SistemaVentasJones\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
+        "packagesPath": "C:\\Users\\ender\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo i5 12va Gen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ender\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -259,7 +244,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -299,7 +283,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

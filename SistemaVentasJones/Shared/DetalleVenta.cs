@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaVentasJones.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -28,15 +29,13 @@ namespace SistemaVentasJones.Shared
         [Required]
 
         public int Descuento { get; set; } = 0;
-        
 
         public decimal SubTotal => Precio * Cantidad;
-        //public decimal IvaAlternativo => SubTotal * (15M / 100M);
-        //public decimal Iva => SubTotal + (SubTotal * (15M / 100M));
-       
-        
-        public decimal SubTotalConDescuento => ((SubTotal) * (Descuento / 100M));
-        
+        public decimal IvaAlternativo => SubTotal * (15M / 100M);
+        public decimal Iva => SubTotal + (SubTotal * (15M / 100M));
+
+        public decimal SubTotalConDescuento => Iva - ((SubTotal) * (Descuento / 100M));
+
 
         //public decimal Iva => (Precio * Cantidad) + (Precio * Cantidad * (15M / 100M)); // 460
         //public decimal SubTotal => Iva - ((Precio * Cantidad) * (Descuento / 100M)); // 420
@@ -51,4 +50,3 @@ namespace SistemaVentasJones.Shared
         #endregion
     }
 }
-
