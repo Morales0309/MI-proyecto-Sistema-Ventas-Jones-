@@ -204,7 +204,7 @@ using Microsoft.JSInterop;
 #line 154 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
              for (int i = 0; i < listadetalle.Count; i++)
             {
-                venta.Total += listadetalle[i].SubTotalConDescuento;
+                venta.Total += listadetalle[i].TotalFinal;
             }
 
 #line default

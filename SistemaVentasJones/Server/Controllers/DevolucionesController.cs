@@ -80,10 +80,10 @@ namespace SistemaVentasJones.Server.Controllers
                 context.Retornos.Add(devoluciones);
 
                 //actualizar el campo Total en la tabla Ventas
-                venta.Total = detalleVenta.SubTotalConDescuento; // malo
+                venta.Total = detalleVenta.SubtotalConDescuento; // malo
 
                 //actualizar el campo Saldo en la tabla Caja
-                caja.Saldo = detalleVenta.SubTotalConDescuento;
+                caja.Saldo = detalleVenta.SubtotalConDescuento;
 
                 //guardar cambios en la base de datos
                 await context.SaveChangesAsync();
