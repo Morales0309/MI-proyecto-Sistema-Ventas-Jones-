@@ -37,6 +37,8 @@ namespace SistemaVentasJones.Server
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
+            // Registro del servicio ITasaCambioService
+            services.AddHttpClient<ITasaCambioService, TasaCambioService>();
 
             services.AddDefaultIdentity<ApplicationUser>(options =>
             {

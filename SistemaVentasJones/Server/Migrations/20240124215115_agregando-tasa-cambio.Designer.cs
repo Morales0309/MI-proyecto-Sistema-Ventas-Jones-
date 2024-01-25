@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaVentasJones.Server.Data;
 
 namespace SistemaVentasJones.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240124215115_agregando-tasa-cambio")]
+    partial class agregandotasacambio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -152,14 +154,14 @@ namespace SistemaVentasJones.Server.Migrations
                         new
                         {
                             Id = "89086180-b978-4f90-9dbd-a7040bc93f41",
-                            ConcurrencyStamp = "4e86c802-1dd6-4fac-954b-a068fc82915f",
+                            ConcurrencyStamp = "2acf5f56-d647-4e75-a2bd-7692bf69f6d7",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
                             Id = "65ade53a-ce03-411e-9d35-08fca7f47014",
-                            ConcurrencyStamp = "bdee3c30-9ea0-4671-ae8d-99528dc0ef03",
+                            ConcurrencyStamp = "536e0c44-226b-4df8-b25a-d88c9ab43375",
                             Name = "empleado",
                             NormalizedName = "empleado"
                         });
@@ -765,24 +767,6 @@ namespace SistemaVentasJones.Server.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tamanios");
-                });
-
-            modelBuilder.Entity("SistemaVentasJones.Shared.TasaCambioModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Date")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Rate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TasaCambioModel");
                 });
 
             modelBuilder.Entity("SistemaVentasJones.Shared.Venta", b =>

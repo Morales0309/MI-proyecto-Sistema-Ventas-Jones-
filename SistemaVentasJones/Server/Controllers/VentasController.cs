@@ -78,50 +78,97 @@ namespace SistemaVentasJones.Server.Controllers
                 .FirstAsync(x => x.Id == id);
         }
 
-        // POST: api/ventas 
+
+
+
+
+
+
+
+
+
+
+
         [HttpPost]
         [AllowAnonymous]
-        public async Task<ActionResult<int>> Post(Venta venta)
+        public async Task<ActionResult<int>> Post(Venta venta, [FromServices] ITasaCambioService tasaCambioService)
         {
-            context.Ventas.Add(venta);
             try
             {
                 var userid = User.GetUserId();
                 venta.EmpleadoId = userid;
                 venta.Fecha = DateTime.Now;
+
+                // Obtener la tasa de cambio desde el servicio
+                venta.TasaCambio = await tasaCambioService.ObtenerTasaCambio();
+
+                Console.WriteLine($"Tasa de Cambio para la Venta #{venta.Numero}: {venta.TasaCambio}");
+
                 if (context.Ventas.IsNullOrEmpty())
                 {
-
                     venta.Numero = 1;
-
                 }
                 else
                 {
-
-                    venta.Numero = context.Ventas.Max(x => x.Numero + 1); //  funcion para obtener el numero de factura, que debe de ser un numero consecutivo y que no se repita jamas                    
+                    venta.Numero = context.Ventas.Max(x => x.Numero + 1);
                 }
 
+                Console.WriteLine($"En dólares: {venta.TasaCambio}");
+                Console.WriteLine($"Número de la Venta: {venta.Numero}");
 
+                context.Ventas.Add(venta);
 
                 await context.SaveChangesAsync();
 
-
                 await GuardarEnCaja(venta);
                 await DecrementaStock(venta);
+
+                Console.WriteLine("Venta creada exitosamente.");
+
             }
-            catch (DbUpdateException)
+            catch (Exception ex)
             {
-                if (Exists(venta.Id))
+                Console.WriteLine($"Error al crear la venta: {ex.Message}");
+                if (ex is DbUpdateException)
                 {
                     return Conflict();
                 }
                 else
                 {
                     throw;
-                }
-            }
+                }            
+        }
+
             return venta.Id;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // DELETE: api/ventas/5  
         [HttpDelete("{id}")]

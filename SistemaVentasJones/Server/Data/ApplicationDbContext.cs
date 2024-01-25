@@ -66,5 +66,6 @@ namespace SistemaVentasJones.Server.Data
         public DbSet<Caja> Caja { get; set; }
         public DbSet<Retornos> Retornos { get; set; }
         public DbSet<Tamanios> Tamanios { get; set; }
+        public DbSet<TasaCambioModel> TasaCambioModel { get; set; }
     }
 }

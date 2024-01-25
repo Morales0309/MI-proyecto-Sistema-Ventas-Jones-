@@ -189,7 +189,7 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 105 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\VerVenta.razor"
+#line 106 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\VerVenta.razor"
        
     public Venta venta { get; set; }
 

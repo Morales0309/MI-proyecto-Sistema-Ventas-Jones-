@@ -33,6 +33,9 @@ namespace SistemaVentasJones.Shared
         [Column(TypeName = "decimal(10,2)")]
         [Range(1, double.MaxValue, ErrorMessage = "Valor inválido")]
         public decimal Total { get; set; }
+
+        //  esto es para la tasa de cambio
+        public decimal TasaCambio { get; set; } = 0; // Valor predeterminado, se actualizará desde la API.
         #endregion
     }
 
