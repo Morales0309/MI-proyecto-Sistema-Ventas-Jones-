@@ -36,6 +36,7 @@ namespace SistemaVentasJones.Shared
 
         //  esto es para la tasa de cambio
         public decimal TasaCambio { get; set; } = 0; // Valor predeterminado, se actualizará desde la API.
+        public decimal TotalDolares { get; set; }
         #endregion
     }
 

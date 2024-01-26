@@ -101,6 +101,8 @@ namespace SistemaVentasJones.Server.Controllers
 
                 // Obtener la tasa de cambio desde el servicio
                 venta.TasaCambio = await tasaCambioService.ObtenerTasaCambio();
+                //  calcular el valor en dolares
+                venta.TotalDolares = venta.Total / venta.TasaCambio;
 
                 Console.WriteLine($"Tasa de Cambio para la Venta #{venta.Numero}: {venta.TasaCambio}");
 
