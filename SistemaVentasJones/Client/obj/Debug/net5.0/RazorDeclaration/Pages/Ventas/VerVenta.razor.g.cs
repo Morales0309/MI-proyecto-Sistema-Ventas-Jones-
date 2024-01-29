@@ -69,13 +69,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 10 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\_Imports.razor"
 using SistemaVentasJones.Client;
 
@@ -167,6 +160,13 @@ using OfficeOpenXml.Style;
 #line hidden
 #nullable disable
 #nullable restore
+#line 25 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\_Imports.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 7 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\VerVenta.razor"
 using System.Text.Json;
 
@@ -189,7 +189,7 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 106 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\VerVenta.razor"
+#line 114 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\VerVenta.razor"
        
     public Venta venta { get; set; }
 

@@ -263,19 +263,27 @@ C:\Users\Lenovo i5 12va Gen\Desktop\Jones\SistemaVentasJones\SistemaVentasJones\
 C:\Users\Lenovo i5 12va Gen\Desktop\Jones\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.pdb
 C:\Users\Lenovo i5 12va Gen\Desktop\Jones\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.genruntimeconfig.cache
 C:\Users\Lenovo i5 12va Gen\Desktop\Jones\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\ref\SistemaVentasJones.Server.dll
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.dll
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Pdb.dll
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.csproj.AssemblyReference.cache
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.AssemblyInfoInputs.cache
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.AssemblyInfo.cs
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.csproj.CoreCompileInputs.cache
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.RazorAssemblyInfo.cache
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.RazorAssemblyInfo.cs
+C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Client.StaticWebAssets.xml
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\appsettings.json
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\bundleconfig.json
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.dll
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugProxy.dll
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.dll
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Pdb.dll
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Rocks.dll
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\BlazorDebugProxy\Newtonsoft.Json.dll
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Client.StaticWebAssets.xml
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Server.StaticWebAssets.xml
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Server.exe
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Server.deps.json
@@ -482,15 +490,7 @@ C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Shared.dll
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Client.pdb
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\bin\Debug\net5.0\SistemaVentasJones.Shared.pdb
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.csproj.AssemblyReference.cache
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.AssemblyInfoInputs.cache
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.AssemblyInfo.cs
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.csproj.CoreCompileInputs.cache
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.RazorAssemblyInfo.cache
-C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\SistemaVentasJones.Server.RazorAssemblyInfo.cs
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\scopedcss\bundle\SistemaVentasJones.Server.styles.css
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\staticwebassets\SistemaVentasJones.Server.StaticWebAssets.Manifest.cache
 C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Server\obj\Debug\net5.0\staticwebassets\SistemaVentasJones.Server.StaticWebAssets.Pack.cache

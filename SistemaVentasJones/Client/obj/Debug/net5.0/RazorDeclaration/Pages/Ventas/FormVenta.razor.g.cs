@@ -166,6 +166,13 @@ using Microsoft.JSInterop;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
+using System.Threading;
+
+#line default
+#line hidden
+#nullable disable
     public partial class FormVenta : global::Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -174,13 +181,20 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 134 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
+#line 144 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
        
     [Parameter] public Venta venta { get; set; } = new Venta();
     [Parameter] public List<Cliente> clientes { get; set; } = new List<Cliente>();
     [Parameter] public List<Articulo> articulos { get; set; } = new List<Articulo>();
     [Parameter] public EventCallback OnValidSubmit { get; set; }
     [Parameter] public string textSubmit { get; set; }
+
+    bool IsFormaPagoSelected(FormasPago fpago) => venta.FormaPago == fpago;
+
+    void HandleFormaPagoChange(FormasPago selectedFormaPago)
+    {
+        venta.FormaPago = selectedFormaPago;
+    }
 
     public decimal Iva = 15M / 100M;
 
@@ -201,7 +215,7 @@ using Microsoft.JSInterop;
 #line hidden
 #nullable disable
 #nullable restore
-#line 154 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
+#line 171 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
              for (int i = 0; i < listadetalle.Count; i++)
             {
                 venta.Total += listadetalle[i].TotalFinal;
@@ -211,7 +225,7 @@ using Microsoft.JSInterop;
 #line hidden
 #nullable disable
 #nullable restore
-#line 157 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
+#line 174 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
              
         }
         return venta.Total;

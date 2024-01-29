@@ -19,15 +19,6 @@
           }
         }
       },
-      "Blazorise/1.4.1": {
-        "type": "package",
-        "build": {
-          "buildTransitive/Blazorise.props": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Blazorise.props": {}
-        }
-      },
       "CsvHelper/12.2.0": {
         "type": "package",
         "dependencies": {
@@ -4215,7 +4206,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Blazorise": "1.4.1",
           "CsvHelper": "12.2.0",
           "EPPlus": "5.4.1",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.17",
@@ -4263,65 +4253,6 @@
         "lib/net461/AutoMapper.xml",
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.xml"
-      ]
-    },
-    "Blazorise/1.4.1": {
-      "sha512": "MCDMoKpjMEH9IsS17KM1+M6hcG9GdHllcTNuz4ltZTMPK7Ug7/zMafMEk3Nkynl++cWLVb7JDEBMkxXaOcTmtw==",
-      "type": "package",
-      "path": "blazorise/1.4.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Blazorise.png",
-        "LICENSE.md",
-        "blazorise.1.4.1.nupkg.sha512",
-        "blazorise.nuspec",
-        "build/Blazorise.props",
-        "build/Microsoft.AspNetCore.StaticWebAssets.props",
-        "buildMultiTargeting/Blazorise.props",
-        "buildTransitive/Blazorise.props",
-        "lib/net6.0/Blazorise.dll",
-        "lib/net6.0/Blazorise.xml",
-        "lib/net7.0/Blazorise.dll",
-        "lib/net7.0/Blazorise.xml",
-        "lib/net8.0/Blazorise.dll",
-        "lib/net8.0/Blazorise.xml",
-        "staticwebassets/blazorise.css",
-        "staticwebassets/blazorise.min.css",
-        "staticwebassets/breakpoint.js",
-        "staticwebassets/button.js",
-        "staticwebassets/closable.js",
-        "staticwebassets/colorPicker.js",
-        "staticwebassets/datePicker.js",
-        "staticwebassets/dragDrop.js",
-        "staticwebassets/dropdown.js",
-        "staticwebassets/fileEdit.js",
-        "staticwebassets/filePicker.js",
-        "staticwebassets/floatingUi.js",
-        "staticwebassets/inputMask.js",
-        "staticwebassets/io.js",
-        "staticwebassets/memoEdit.js",
-        "staticwebassets/numericPicker.js",
-        "staticwebassets/observer.js",
-        "staticwebassets/table.js",
-        "staticwebassets/textEdit.js",
-        "staticwebassets/theme.js",
-        "staticwebassets/timePicker.js",
-        "staticwebassets/tooltip.js",
-        "staticwebassets/utilities.js",
-        "staticwebassets/validators/DateTimeMaskValidator.js",
-        "staticwebassets/validators/NoValidator.js",
-        "staticwebassets/validators/NumericMaskValidator.js",
-        "staticwebassets/validators/RegExMaskValidator.js",
-        "staticwebassets/vendors/Behave.js",
-        "staticwebassets/vendors/Pickr.js",
-        "staticwebassets/vendors/autoNumeric.js",
-        "staticwebassets/vendors/flatpickr.js",
-        "staticwebassets/vendors/floating-ui-core.js",
-        "staticwebassets/vendors/floating-ui.js",
-        "staticwebassets/vendors/inputmask.js",
-        "staticwebassets/vendors/jsencrypt.js",
-        "staticwebassets/vendors/sha512.js"
       ]
     },
     "CsvHelper/12.2.0": {

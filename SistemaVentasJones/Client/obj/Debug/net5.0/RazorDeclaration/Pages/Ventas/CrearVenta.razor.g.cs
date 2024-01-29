@@ -69,13 +69,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 10 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\_Imports.razor"
 using SistemaVentasJones.Client;
 
@@ -167,6 +160,13 @@ using OfficeOpenXml.Style;
 #line hidden
 #nullable disable
 #nullable restore
+#line 25 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\_Imports.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 6 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\Pages\Ventas\CrearVenta.razor"
            [Authorize(Roles = "admin, empleado")]
 
@@ -197,7 +197,7 @@ using OfficeOpenXml.Style;
     async Task CrearVent()
     {
         var confirmacion = await JS.InvokeAsync<bool>("confirmar", "¿Finalizar venta?",
-            $"Total: C${Math.Round(venta.Total,2)}.", "question");
+            $"Total: C${Math.Round(venta.Total,2)} | Total U$ {Math.Round(venta.TotalDolares,2)}", "question");
         if (confirmacion)
         {
             var respuesta = await Http.PostAsJsonAsync("api/ventas", venta);
@@ -212,7 +212,7 @@ using OfficeOpenXml.Style;
             }
             else
             {
-                await JS.InvokeVoidAsync("simple", "Error", "No se pudo realizar venta", "error");
+                await JS.InvokeVoidAsync("simple", "Error", "No se pudo realizar venta", "Error");
             }
         }
     }

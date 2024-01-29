@@ -36,13 +36,21 @@ namespace SistemaVentasJones.Shared
 
         //  esto es para la tasa de cambio
         public decimal TasaCambio { get; set; } = 0; // Valor predeterminado, se actualizará desde la API.
-        public decimal TotalDolares { get; set; }
+        public decimal TotalDolares
+        {
+            get
+            {
+                return Total / 36.62m;
+            }
+            set { }
+        }
         #endregion
     }
 
     public enum FormasPago // segun los requerimientos del cliente solo se aceptara córdoba como moneda de pago
     {
-        Cordoba = 1
+        Cordoba = 1,
+        Dolares = 2
     }
 
 

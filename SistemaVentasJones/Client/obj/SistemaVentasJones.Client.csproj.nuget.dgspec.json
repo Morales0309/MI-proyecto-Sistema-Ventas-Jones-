@@ -44,10 +44,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Blazorise": {
-              "target": "Package",
-              "version": "[1.4.1, )"
-            },
             "CsvHelper": {
               "target": "Package",
               "version": "[12.2.0, )"

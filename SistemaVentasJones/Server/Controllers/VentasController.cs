@@ -78,17 +78,6 @@ namespace SistemaVentasJones.Server.Controllers
                 .FirstAsync(x => x.Id == id);
         }
 
-
-
-
-
-
-
-
-
-
-
-
         [HttpPost]
         [AllowAnonymous]
         public async Task<ActionResult<int>> Post(Venta venta, [FromServices] ITasaCambioService tasaCambioService)

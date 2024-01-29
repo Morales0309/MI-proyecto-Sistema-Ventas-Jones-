@@ -1,10 +1,27 @@
 ﻿@inject NavigationManager NavigationManager
 @inject HttpClient Http
 @using Microsoft.JSInterop;
+@using System.Threading;
 @inject IJSRuntime JSRuntime
 
 <EditForm Model="@venta" OnValidSubmit="OnValidSubmit">
     <div class="form-field mt-2 mb-2">
+        <div class="form-group row">
+            <MudGrid>
+    <MudItem sm="12" md="6">
+                    <MudRadioGroup T="FormasPago" @bind-Value="venta.FormaPago" Orientation="Orientation.Horizontal">
+                        @foreach (FormasPago fpago in Enum.GetValues(typeof(FormasPago)))
+                        {
+                            <MudRadio Color="Color.Tertiary" Size="Size.Large" T="FormasPago" Label="@fpago.ToString()" Value="@fpago" Checked="@IsFormaPagoSelected(fpago)" @oninput="(() => HandleFormaPagoChange(fpago))">
+                                <span>@fpago.ToString()</span>
+                            </MudRadio>
+                        }
+                    </MudRadioGroup>
+            </MudItem>
+            </MudGrid>
+        </div>
+
+
         <div class="form-group row" hidden="@ocultaclientes">
             <label class="col-3 col-form-label">Cliente</label>
             <div class="col">
@@ -21,6 +38,7 @@
                 <ValidationMessage For="@(() => venta.ClienteId)" />
             </div>
         </div>
+        
 
         <div class="form-group">
             @for (int i = 0; i < venta.DetalleVentas.Count; i++)
@@ -71,7 +89,7 @@
                             <label>Cantidad</label>
                             @* <InputNumber @bind-Value="detalle.Cantidad" class="form-control" min="1" max="@cantidadmax" /> *@
                             <MudNumericField @bind-Value="detalle.Cantidad" Label="Ingrese la cantidad" Variant="Variant.Outlined"
-                                             Min="1" Max="@cantidadmax" Step="1" />
+                                         Min="1" Max="@cantidadmax" Step="1" />
                             <ValidationMessage For="@(() => detalle.Cantidad)" />
                         </div>
 
@@ -79,7 +97,7 @@
                             <label>Descuento</label>
                             @* <InputNumber @bind-Value="detalle.Descuento" class="form-control" min="-100" max="100" /> *@
                             <MudNumericField @bind-Value="detalle.Descuento" Label="Ingrese el descuento por producto" Variant="Variant.Outlined"
-                                             Min="0" Max="100" Step="5" />
+                                         Min="0" Max="100" Step="5" />
                             <ValidationMessage For="@(() => detalle.Descuento)" />
                         </div>
 
@@ -92,21 +110,13 @@
                             </div>
 
                         </div>
-                        @*<div class="col-5">
-                    <div class="d-flex justify-content-end mb-2 ml-2 mr-2">
-                    <h3>IVA</h3>
-                    </div>
-                    <div class="d-flex justify-content-end mt-3 ml-2 mr-2">
-                    <h4><b>C$ @Math.Round(detalle.IvaAlternativo,2)</b></h4>
-                    </div>
-                    </div>*@
                     </div>
                 </MudCard>
             }
 
             <div class="btn-group">
                 <button type="button" class="btn btn-success"
-                @onclick="@(() => venta.DetalleVentas.Add(new DetalleVenta()))">
+                        @onclick="@(() => venta.DetalleVentas.Add(new DetalleVenta()))">
                     Agregar detalle
                 </button>
             </div>
@@ -138,6 +148,13 @@
     [Parameter] public EventCallback OnValidSubmit { get; set; }
     [Parameter] public string textSubmit { get; set; }
 
+    bool IsFormaPagoSelected(FormasPago fpago) => venta.FormaPago == fpago;
+
+    void HandleFormaPagoChange(FormasPago selectedFormaPago)
+    {
+        venta.FormaPago = selectedFormaPago;
+    }
+
     public decimal Iva = 15M / 100M;
 
     public bool ocultaclientes = false;
@@ -165,3 +182,4 @@
         NavigationManager.NavigateTo("/lista-ventas");
     }
 }
+

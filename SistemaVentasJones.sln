@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaVentasJones.Server", "SistemaVentasJones\Server\SistemaVentasJones.Server.csproj", "{D361612C-DFE5-4CB7-A00F-ED1B9DA4672F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaVentasJones.Server", "SistemaVentasJones\Server\SistemaVentasJones.Server.csproj", "{D361612C-DFE5-4CB7-A00F-ED1B9DA4672F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaVentasJones.Client", "SistemaVentasJones\Client\SistemaVentasJones.Client.csproj", "{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaVentasJones.Client", "SistemaVentasJones\Client\SistemaVentasJones.Client.csproj", "{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaVentasJones.Shared", "SistemaVentasJones\Shared\SistemaVentasJones.Shared.csproj", "{2B64F8E0-13C5-46E5-B276-F7F65E77BFE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaVentasJones.Shared", "SistemaVentasJones\Shared\SistemaVentasJones.Shared.csproj", "{2B64F8E0-13C5-46E5-B276-F7F65E77BFE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

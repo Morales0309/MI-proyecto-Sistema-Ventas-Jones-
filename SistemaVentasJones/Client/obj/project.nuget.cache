@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "fU3JxCUHzWZ+YQgweNufaiieXIZ+sD/iWBy/4KRS8zIeEHtr0X3KIWLEsRrf1LfEIFVMVNKMxU9cyWPFfigT5g==",
+  "dgSpecHash": "4/X2NJEUIzUtLIEgaibMTi7Q9c4dmE3h288qrFKAvYI+rydtL1wtX++pt97j+NF4ymAB1TwJcYsTaFgxN5+5vQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ender\\.nuget\\packages\\blazorise\\1.4.1\\blazorise.1.4.1.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\csvhelper\\12.2.0\\csvhelper.12.2.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\epplus\\5.4.1\\epplus.5.4.1.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.17\\microsoft.aspnetcore.authorization.5.0.17.nupkg.sha512",

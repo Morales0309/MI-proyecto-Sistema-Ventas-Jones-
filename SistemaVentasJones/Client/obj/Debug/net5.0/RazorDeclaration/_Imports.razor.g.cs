@@ -166,6 +166,13 @@ using OfficeOpenXml.Style;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 25 "C:\Users\ender\Music\SistemaVentasJones\SistemaVentasJones\Client\_Imports.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
     public partial class _Imports : System.Object
     {
         #pragma warning disable 1998

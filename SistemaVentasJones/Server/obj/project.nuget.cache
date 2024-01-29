@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c4fxGjsXC1XJ57coHhoCm/WSTm61z7+G0148SEB9bBmmrN27rlwLhg4w+Vw1wES0N2xsxoir7ov04VLfzDz3Jw==",
+  "dgSpecHash": "JbbUp7H76ZZTjeZRwPXqpJnsrMLnTfjo5X0llmPlrOfmY9rOaYmxVMZ+sZ/9W0i1eXlJLEGAKqaV4iqsiImQqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ender\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
-    "C:\\Users\\ender\\.nuget\\packages\\blazorise\\1.4.1\\blazorise.1.4.1.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\csvhelper\\12.2.0\\csvhelper.12.2.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\epplus\\5.4.1\\epplus.5.4.1.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
