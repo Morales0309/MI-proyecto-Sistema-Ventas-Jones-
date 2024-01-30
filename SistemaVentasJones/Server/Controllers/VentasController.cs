@@ -28,22 +28,58 @@ namespace SistemaVentasJones.Server.Controllers
         }
 
         //GET: api/ventas
-        [HttpGet]
+        //[HttpGet]
+        //[AllowAnonymous]
+        //public async Task<ActionResult<List<Venta>>> Get()
+        //{
+        //    return await context.Ventas.Include(x => x.Cliente)
+        //        .Include(x => x.ApplicationUser)
+        //        .Include(x => x.DetalleVentas)
+        //        .ThenInclude(x => x.Articulo)
+        //        .ToListAsync();
+        //}
+        [HttpGet()]
         [AllowAnonymous]
         public async Task<ActionResult<List<Venta>>> Get()
         {
-            return await context.Ventas.Include(x => x.Cliente)
+            return await context.Ventas
+                .OrderByDescending(x => x.Fecha)
+                .Take(10)  // Ajusta el número según tus necesidades
+                .Include(x => x.Cliente)
                 .Include(x => x.ApplicationUser)
-                .Include(x => x.DetalleVentas)
-                .ThenInclude(x => x.Articulo)
                 .ToListAsync();
         }
 
+
         //GET: api/ventas/filtro/cliente&empleado&fecha
+        //[HttpGet("filtro")]
+        //[AllowAnonymous]
+        //// public async Task<ActionResult<List<Venta>>> Get([FromQuery] string empleado, [FromQuery] datetime fecha)
+        //public async Task<ActionResult<List<Venta>>> Get([FromQuery] string empleado, [FromQuery] string fecha) // para que funcione en rider
+        //{
+        //    DateTime f = Convert.ToDateTime(fecha);
+
+        //    var queryable = context.Ventas
+        //        .Include(x => x.Cliente)
+        //        .Include(x => x.ApplicationUser)
+        //        .Include(x => x.DetalleVentas)
+        //        .ThenInclude(x => x.Articulo).AsQueryable();
+
+        //    if (!string.IsNullOrEmpty(empleado))
+        //    {
+        //        queryable = queryable.Where(x => x.ApplicationUser.NombreyApellido.Contains(empleado));
+        //    }
+        //    if (f != DateTime.Today.AddDays(+1))
+        //    {
+        //        queryable = queryable.Where(x => x.Fecha.Day == f.Day &&
+        //                                    x.Fecha.Month == f.Month &&
+        //                                    x.Fecha.Year == f.Year);
+        //    }
+        //    return await queryable.OrderByDescending(x => x.Fecha).ToListAsync();
+        //}
         [HttpGet("filtro")]
         [AllowAnonymous]
-        // public async Task<ActionResult<List<Venta>>> Get([FromQuery] string empleado, [FromQuery] datetime fecha)
-        public async Task<ActionResult<List<Venta>>> Get([FromQuery] string empleado, [FromQuery] string fecha) // para que funcione en rider
+        public async Task<ActionResult<List<Venta>>> Get([FromQuery] string empleado, [FromQuery] string fecha)
         {
             DateTime f = Convert.ToDateTime(fecha);
 
@@ -51,31 +87,47 @@ namespace SistemaVentasJones.Server.Controllers
                 .Include(x => x.Cliente)
                 .Include(x => x.ApplicationUser)
                 .Include(x => x.DetalleVentas)
-                .ThenInclude(x => x.Articulo).AsQueryable();
+                .ThenInclude(x => x.Articulo)
+                .AsQueryable();
 
             if (!string.IsNullOrEmpty(empleado))
             {
                 queryable = queryable.Where(x => x.ApplicationUser.NombreyApellido.Contains(empleado));
             }
+
             if (f != DateTime.Today.AddDays(+1))
             {
-                queryable = queryable.Where(x => x.Fecha.Day == f.Day &&
-                                            x.Fecha.Month == f.Month &&
-                                            x.Fecha.Year == f.Year);
+                queryable = queryable.Where(x => x.Fecha.Date == f.Date);
             }
-            return await queryable.OrderByDescending(x => x.Fecha).ToListAsync();
+
+            // Aplicar paginación, limitando a los primeros 20 resultados
+            queryable = queryable.OrderByDescending(x => x.Fecha).Take(20);
+
+            return await queryable.ToListAsync();
         }
 
+
         // GET: api/ventas/5
+        //[HttpGet("{id}")]
+        //[AllowAnonymous]
+        //public async Task<ActionResult<Venta>> Get(int id)
+        //{
+        //    return await context.Ventas.Include(x => x.Cliente)
+        //        .Include(x => x.ApplicationUser)
+        //        .Include(x => x.DetalleVentas)
+        //        .ThenInclude(x => x.Articulo)
+        //        .FirstAsync(x => x.Id == id);
+        //}
         [HttpGet("{id}")]
         [AllowAnonymous]
         public async Task<ActionResult<Venta>> Get(int id)
         {
-            return await context.Ventas.Include(x => x.Cliente)
+            return await context.Ventas
+                .Include(x => x.Cliente)
                 .Include(x => x.ApplicationUser)
                 .Include(x => x.DetalleVentas)
                 .ThenInclude(x => x.Articulo)
-                .FirstAsync(x => x.Id == id);
+                .FirstOrDefaultAsync(x => x.Id == id);
         }
 
         [HttpPost]
@@ -95,14 +147,23 @@ namespace SistemaVentasJones.Server.Controllers
 
                 Console.WriteLine($"Tasa de Cambio para la Venta #{venta.Numero}: {venta.TasaCambio}");
 
-                if (context.Ventas.IsNullOrEmpty())
+                //if (context.Ventas.IsNullOrEmpty())
+                //{
+                //    venta.Numero = 1;
+                //}
+                //else
+                //{
+                //    venta.Numero = context.Ventas.Max(x => x.Numero + 1);
+                //}
+                if (!context.Ventas.Any())
                 {
                     venta.Numero = 1;
                 }
                 else
                 {
-                    venta.Numero = context.Ventas.Max(x => x.Numero + 1);
+                    venta.Numero = context.Ventas.Max(x => x.Numero) + 1;
                 }
+
 
                 Console.WriteLine($"En dólares: {venta.TasaCambio}");
                 Console.WriteLine($"Número de la Venta: {venta.Numero}");
