@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\server\\SistemaVentasJones.Server.csproj": {}
+    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj": {}
   },
   "projects": {
     "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {
@@ -113,14 +113,14 @@
         }
       }
     },
-    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\server\\SistemaVentasJones.Server.csproj": {
+    "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\server\\SistemaVentasJones.Server.csproj",
+        "projectUniqueName": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
         "projectName": "SistemaVentasJones.Server",
-        "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\server\\SistemaVentasJones.Server.csproj",
+        "projectPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
         "packagesPath": "C:\\Users\\ender\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\server\\obj\\",
+        "outputPath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ender\\AppData\\Roaming\\NuGet\\NuGet.Config",

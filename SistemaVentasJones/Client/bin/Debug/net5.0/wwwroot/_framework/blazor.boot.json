@@ -211,15 +211,15 @@
       "mscorlib.dll": "sha256-zMI\/dXK7DoZZ9Qm9U9\/jRN4iQ9Ss3w8\/rwQQxC6SW9Y=",
       "netstandard.dll": "sha256-W3q3PN+lpRB+tRJEIhtMgYOGFv0pauEeeCS9iIRkKAM=",
       "System.Private.CoreLib.dll": "sha256-9rUJv1mXEQdGt\/kWiJ1ITPPzp3cAi3lSmqHVTisp7w0=",
-      "SistemaVentasJones.Shared.dll": "sha256-sL78HSMRcMdCM11YhWX4gmDCwR2r0NvI5Tj\/7sWI9L8=",
-      "SistemaVentasJones.Client.dll": "sha256-3KRQG1tZRDKXRnZsLrOH+s16UlYbMnTUwzJIQWzGA2I="
+      "SistemaVentasJones.Shared.dll": "sha256-xCN95RGOHD\/25YrW47KFUD1g\/UB9QmGoOpi32vomoPg=",
+      "SistemaVentasJones.Client.dll": "sha256-577lEDYWVJJCtrVMkBrkgusY8Wlengs7xAsvS2s4fPg="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "SistemaVentasJones.Shared.pdb": "sha256-pIFYZsHMq6iHOM8hpNldJdy\/jYc+58csK2EDg6lmeJI=",
-      "SistemaVentasJones.Client.pdb": "sha256-AMk53h6kDpNIXSi70rrflO1qrVLOCw3a3kthKN\/TJmA="
+      "SistemaVentasJones.Shared.pdb": "sha256-g3ySw0bWUHKzvQUJPKyf1K7emUwVlSHojSA03ESRtjU=",
+      "SistemaVentasJones.Client.pdb": "sha256-Tc64miRfxkek5Rb7aqhLEXHD2wJWmW6lehyHv5\/mleY="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-8oJip361m8OrfLRJOuIeswWKaoxtT27\/wINCxhn+s4c=",

@@ -39,28 +39,29 @@
             </div>
         </div>
         
+        <!-- ... (código anterior) ... -->
 
-        <div class="form-group">
+<div class="form-group">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Artículo</th>
+                <th>Cantidad</th>
+                <th>Descuento</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
             @for (int i = 0; i < venta.DetalleVentas.Count; i++)
             {
                 var indice = i;
                 var detalle = venta.DetalleVentas[i];
                 listadetalle = venta.DetalleVentas;
 
-                <h5>Detalle #@(i + 1)</h5>
-
-                @* <div class="card mb-2" style="background-color:lightgrey;border-radius:0.5rem;"> *@
-                <MudCard>
-                    <div class="row">
-                        <div class="col-12 form-group">
-                            <div class="d-flex justify-content-between align-items-center m-1">
-                                <label>Artículo</label>
-                                <button type="button" @onclick="@(() => venta.DetalleVentas.RemoveAt(indice))" class="btn btn-danger btn-sm" style="border-radius:10px">
-                                    <i class="oi oi-trash"></i><text style="color:white">Quitar ítem @(indice + 1)</text>
-                                </button>
-                            </div>
-
-                            <InputSelect @bind-Value="detalle.ArticuloId" required class="form-control">
+                <tr>
+                    <td>
+                        <InputSelect @bind-Value="detalle.ArticuloId" required class="form-control">
                                 <option selected value="">Seleccione un artículo</option>
                                 @foreach (var articulo in articulos)
                                 {
@@ -72,10 +73,8 @@
                             </InputSelect>
 
                             <ValidationMessage For="@(() => detalle.ArticuloId)" />
-                        </div>
-                    </div>
-
-                    @foreach (var art in articulos)
+                            
+                            @foreach (var art in articulos)
                     {
                         if (detalle.ArticuloId == art.Id)
                         {
@@ -83,36 +82,30 @@
                             detalle.Precio = art.PrecioUnitario;
                         }
                     }
-
-                    <div class="row">
-                        <div class="col-5 form-group">
-                            <label>Cantidad</label>
-                            @* <InputNumber @bind-Value="detalle.Cantidad" class="form-control" min="1" max="@cantidadmax" /> *@
-                            <MudNumericField @bind-Value="detalle.Cantidad" Label="Ingrese la cantidad" Variant="Variant.Outlined"
+                    </td>
+                    <td>
+                        <MudNumericField @bind-Value="detalle.Cantidad" Label="Ingrese la cantidad" Variant="Variant.Outlined"
                                          Min="1" Max="@cantidadmax" Step="1" />
                             <ValidationMessage For="@(() => detalle.Cantidad)" />
-                        </div>
-
-                        <div class="col-5 form-group">
-                            <label>Descuento</label>
-                            @* <InputNumber @bind-Value="detalle.Descuento" class="form-control" min="-100" max="100" /> *@
-                            <MudNumericField @bind-Value="detalle.Descuento" Label="Ingrese el descuento por producto" Variant="Variant.Outlined"
+                    </td>
+                    <td>
+                        <MudNumericField @bind-Value="detalle.Descuento" Label="Ingrese el descuento por producto" Variant="Variant.Outlined"
                                          Min="0" Max="100" Step="5" />
                             <ValidationMessage For="@(() => detalle.Descuento)" />
-                        </div>
-
-                        <div class="col-5">
-                            <div class="d-flex justify-content-start mb-2 ml-2 mr-2">
-                                <h3>Subtotal</h3>
-                            </div>
-                            <div class="d-flex justify-content-end mt-3 ml-2 mr-2">
-                                <h4><b>C$ @Math.Round(detalle.SubTotal,2)</b></h4>
-                            </div>
-
-                        </div>
-                    </div>
-                </MudCard>
+                    </td>
+                    <td>
+                       C$ @Math.Round(detalle.SubTotal,2)
+                    </td>
+                    <td>
+                        <button type="button" @onclick="@(() => venta.DetalleVentas.RemoveAt(indice))" class="btn btn-danger btn-sm" style="border-radius:10px">
+                                    <i class="oi oi-trash"></i><text style="color:white">Quitar ítem @(indice + 1)</text>
+                                </button>
+                    </td>
+                </tr>
             }
+        </tbody>
+    </table>
+</div>
 
             <div class="btn-group">
                 <button type="button" class="btn btn-success"
@@ -137,7 +130,6 @@
                 <button @onclick="@Volver" class="btn btn-danger"><i class="oi oi-x"></i><text style="color:white"> Cancelar y volver atrás</text></button>
             </div>
         </div>
-    </div>
     <DataAnnotationsValidator />
 </EditForm>
 
@@ -182,4 +174,3 @@
         NavigationManager.NavigateTo("/lista-ventas");
     }
 }
-
