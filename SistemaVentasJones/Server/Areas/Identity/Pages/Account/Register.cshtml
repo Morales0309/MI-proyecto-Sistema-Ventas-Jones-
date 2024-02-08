@@ -29,6 +29,11 @@
                         <span asp-validation-for="Input.Apellido" class="text-danger"></span>
                     </div>
                     <div class="form-outline mb-4">
+                        <label asp-for="Input.Cedula">Cédula de identidad</label>
+                        <input asp-for="Input.Cedula" class="form-control" placeholder="Formato de Cedula: 000-000000-0000A" />
+                        <span asp-validation-for="Input.Cedula" class="text-danger"></span>
+                    </div>
+                    <div class="form-outline mb-4">
                         <label asp-for="Input.Email"></label>
                         <input asp-for="Input.Email" class="form-control" placeholder="Ingrese una dirección email" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>

@@ -79,7 +79,7 @@ namespace SistemaVentasJones.Server.Controllers
         //}
         [HttpGet("filtro")]
         [AllowAnonymous]
-        public async Task<ActionResult<List<Venta>>> Get([FromQuery] string empleado, [FromQuery] string fecha)
+        public async Task<ActionResult<List<Venta>>> Get([FromQuery] string empleado, [FromQuery] string fecha, [FromQuery] string numFactura)
         {
             DateTime f = Convert.ToDateTime(fecha);
 
@@ -93,11 +93,15 @@ namespace SistemaVentasJones.Server.Controllers
             if (!string.IsNullOrEmpty(empleado))
             {
                 queryable = queryable.Where(x => x.ApplicationUser.NombreyApellido.Contains(empleado));
-            }
-
+            }            
             if (f != DateTime.Today.AddDays(+1))
             {
                 queryable = queryable.Where(x => x.Fecha.Date == f.Date);
+            }
+            if (!string.IsNullOrEmpty(numFactura))
+            {
+                // Convertir el número de factura a cadena y luego verificar la contención
+                queryable = queryable.Where(x => x.Numero.ToString().Contains(numFactura));
             }
 
             // Aplicar paginación, limitando a los primeros 20 resultados
@@ -132,7 +136,7 @@ namespace SistemaVentasJones.Server.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<ActionResult<int>> Post(Venta venta, [FromServices] ITasaCambioService tasaCambioService)
+        public async Task<ActionResult<int>> Post(Venta venta, [FromServices] ITasaCambioService tasaCambioService, decimal cantidadPagada)
         {
             try
             {
@@ -146,15 +150,7 @@ namespace SistemaVentasJones.Server.Controllers
                 venta.TotalDolares = venta.Total / venta.TasaCambio;
 
                 Console.WriteLine($"Tasa de Cambio para la Venta #{venta.Numero}: {venta.TasaCambio}");
-
-                //if (context.Ventas.IsNullOrEmpty())
-                //{
-                //    venta.Numero = 1;
-                //}
-                //else
-                //{
-                //    venta.Numero = context.Ventas.Max(x => x.Numero + 1);
-                //}
+               
                 if (!context.Ventas.Any())
                 {
                     venta.Numero = 1;
@@ -167,7 +163,7 @@ namespace SistemaVentasJones.Server.Controllers
 
                 Console.WriteLine($"En dólares: {venta.TasaCambio}");
                 Console.WriteLine($"Número de la Venta: {venta.Numero}");
-
+                 
                 context.Ventas.Add(venta);
 
                 await context.SaveChangesAsync();
@@ -193,34 +189,6 @@ namespace SistemaVentasJones.Server.Controllers
 
             return venta.Id;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // DELETE: api/ventas/5  
         [HttpDelete("{id}")]

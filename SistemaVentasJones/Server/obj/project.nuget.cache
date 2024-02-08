@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JbbUp7H76ZZTjeZRwPXqpJnsrMLnTfjo5X0llmPlrOfmY9rOaYmxVMZ+sZ/9W0i1eXlJLEGAKqaV4iqsiImQqA==",
+  "dgSpecHash": "+cx9ic3hxBnsGuI8NuaX7xTt/OM+QzkMqdJHRvGRKR7bxaETNrk7BjWq+P9SmhNf4nVLw8doQAOUWtWt1Sv6Xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
+  "projectFilePath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ender\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\csvhelper\\12.2.0\\csvhelper.12.2.0.nupkg.sha512",

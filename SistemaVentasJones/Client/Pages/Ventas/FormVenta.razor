@@ -12,9 +12,11 @@
                     <MudRadioGroup T="FormasPago" @bind-Value="venta.FormaPago" Orientation="Orientation.Horizontal">
                         @foreach (FormasPago fpago in Enum.GetValues(typeof(FormasPago)))
                         {
-                            <MudRadio Color="Color.Tertiary" Size="Size.Large" T="FormasPago" Label="@fpago.ToString()" Value="@fpago" Checked="@IsFormaPagoSelected(fpago)" @oninput="(() => HandleFormaPagoChange(fpago))">
-                                <span>@fpago.ToString()</span>
-                            </MudRadio>
+                            <MudTooltip Text="Seleccione la moneda en que desea facturar el cliente" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
+                                <MudRadio Color="Color.Tertiary" Size="Size.Large" T="FormasPago" Label="@fpago.ToString()" Value="@fpago" Checked="@IsFormaPagoSelected(fpago)" @oninput="(() => HandleFormaPagoChange(fpago))">
+                                    <span>@fpago.ToString()</span>
+                                </MudRadio>
+                            </MudTooltip>                            
                         }
                     </MudRadioGroup>
             </MudItem>
@@ -40,6 +42,12 @@
         </div>
         
         <!-- ... (código anterior) ... -->
+        <div class="btn-group  mb-3">
+            <button type="button" class="btn btn-success" style="margin-: 10px;"
+            @onclick="@(() => venta.DetalleVentas.Add(new DetalleVenta()))">
+                Agregar detalle
+            </button>
+        </div>
 
 <div class="form-group">
     <table class="table">
@@ -70,18 +78,17 @@
                                         <option value="@articulo.Id">@articulo.Nombre | C$ @articulo.PrecioUnitario | STOCK: @articulo.StockActual</option>
                                     }
                                 }
-                            </InputSelect>
-
+                            </InputSelect>                            
                             <ValidationMessage For="@(() => detalle.ArticuloId)" />
                             
                             @foreach (var art in articulos)
-                    {
-                        if (detalle.ArticuloId == art.Id)
-                        {
-                            cantidadmax = art.StockActual;
-                            detalle.Precio = art.PrecioUnitario;
-                        }
-                    }
+                                {
+                                    if (detalle.ArticuloId == art.Id)
+                                    {
+                                        cantidadmax = art.StockActual;
+                                        detalle.Precio = art.PrecioUnitario;
+                                    }
+                                }
                     </td>
                     <td>
                         <MudNumericField @bind-Value="detalle.Cantidad" Label="Ingrese la cantidad" Variant="Variant.Outlined"
@@ -89,7 +96,7 @@
                             <ValidationMessage For="@(() => detalle.Cantidad)" />
                     </td>
                     <td>
-                        <MudNumericField @bind-Value="detalle.Descuento" Label="Ingrese el descuento por producto" Variant="Variant.Outlined"
+                        <MudNumericField @bind-Value="detalle.Descuento" Label="Ingrese el descuento en % por producto" Variant="Variant.Outlined"
                                          Min="0" Max="100" Step="5" />
                             <ValidationMessage For="@(() => detalle.Descuento)" />
                     </td>
@@ -107,34 +114,48 @@
     </table>
 </div>
 
-            <div class="btn-group">
-                <button type="button" class="btn btn-success"
-                        @onclick="@(() => venta.DetalleVentas.Add(new DetalleVenta()))">
-                    Agregar detalle
-                </button>
+
+
+        <div class="d-flex justify-content-end py-2">
+            <button @onclick="@(() => CalcularTotal())" type="button" class="" style="border:none">
+                <h3><b>TOTAL: <br></b></h3>
+                @if (venta.Total != 0)
+                {
+                    <h2><b><br>C$ @Math.Round(venta.Total, 2)</b></h2>
+                }
+            </button>
+        </div>
+
+        <div class="card p-3">
+            <div class="mb-3">
+                <label for="cantidadPagada">Paga con la cantidad de:</label>                
+                @*<input type="number" min="0" id="CantidadPagada" @bind-value="@venta.CantidadPagada" class="form-control" />*@ 
+                <MudNumericField @bind-Value="venta.CantidadPagada" Label="Cantidad pagada" Variant="Variant.Outlined"
+                                 Min="@detalleVentas.SubtotalConDescuento" Step="10" />
             </div>
-
-            <div class="d-flex justify-content-end py-2">
-                <button @onclick="@(() => CalcularTotal())" type="button" class="" style="border:none">
-                    <h3><b>TOTAL: <br></b></h3>
-                    @if (venta.Total != 0)
-                    {
-
-                        <h2><b><br>C$ @Math.Round(venta.Total,2)</b></h2>
-                    }
-                </button>
-            </div>
-
-            <div class="btn-group btn-block">
-                <button @onclick="@(() => CalcularTotal())" type="submit" class="btn btn-success"><i class="oi oi-check"></i><text style="color:white"> @textSubmit</text></button>
-                <button @onclick="@Volver" class="btn btn-danger"><i class="oi oi-x"></i><text style="color:white"> Cancelar y volver atrás</text></button>
+           
+            <div class="mb-3">
+                <label for="vuelto">Vuelto:</label>
+               @* <input type="text" min="0" id="vuelto"  readonly value="@Math.Round(vuelto, 2)" class="form-control" />*@
+                <MudNumericField id="vuelto" @bind-Value="vuelto" Label="Cambio de su dinero" Variant="Variant.Outlined"
+                                ReadOnly="true"  Min="0"  Step="10" />
             </div>
         </div>
+
+
+
+        <div class="btn-group btn-block">
+            <button @onclick="@(() => CalcularTotal())" type="submit" class="btn btn-success"><i class="oi oi-check"></i><text style="color:white"> @textSubmit</text></button>
+            <button @onclick="@Volver" class="btn btn-danger"><i class="oi oi-x"></i><text style="color:white"> Cancelar y volver atrás</text></button>
+        </div>
+        </div>
+
     <DataAnnotationsValidator />
 </EditForm>
 
 @code {
     [Parameter] public Venta venta { get; set; } = new Venta();
+    [Parameter] public DetalleVenta detalleVentas { get; set; } = new DetalleVenta();
     [Parameter] public List<Cliente> clientes { get; set; } = new List<Cliente>();
     [Parameter] public List<Articulo> articulos { get; set; } = new List<Articulo>();
     [Parameter] public EventCallback OnValidSubmit { get; set; }
@@ -154,18 +175,34 @@
     public List<DetalleVenta> listadetalle { get; set; } = new List<DetalleVenta>();
 
     public int cantidadmax { get; set; } //cantidad maxima de un articulo por su stock
+    private decimal cantidadPagada = 0;
+    private decimal vuelto = 0;
+
 
     decimal CalcularTotal()
     {
         venta.Total = 0;
+
         if (listadetalle.Count > 0)
         {
-            @for (int i = 0; i < listadetalle.Count; i++)
+            for (int i = 0; i < listadetalle.Count; i++)
             {
                 venta.Total += listadetalle[i].TotalFinal;
             }
         }
+
+        // Calcular vuelto (si se ha ingresado una cantidad pagada)
+        if (cantidadPagada > 0)
+        {
+            vuelto = cantidadPagada - venta.Total;
+        }
+
+
         return venta.Total;
+    }
+    public void CalcularVuelto()
+    {
+        vuelto = venta.CantidadPagada - venta.Total;
     }
 
 

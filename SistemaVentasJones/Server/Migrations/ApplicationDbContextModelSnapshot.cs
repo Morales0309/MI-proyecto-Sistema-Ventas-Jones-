@@ -152,14 +152,14 @@ namespace SistemaVentasJones.Server.Migrations
                         new
                         {
                             Id = "89086180-b978-4f90-9dbd-a7040bc93f41",
-                            ConcurrencyStamp = "0cae5df9-ab18-4900-b5de-7c23f736a346",
+                            ConcurrencyStamp = "0b435f7a-c64d-4627-9c28-f6f67ff8eb1e",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
                             Id = "65ade53a-ce03-411e-9d35-08fca7f47014",
-                            ConcurrencyStamp = "fc2ffd65-f359-49be-9569-560390f61869",
+                            ConcurrencyStamp = "ff0da501-6f7c-44b4-9f24-6d7949fa4de8",
                             Name = "empleado",
                             NormalizedName = "empleado"
                         });
@@ -282,6 +282,9 @@ namespace SistemaVentasJones.Server.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Apellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cedula")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -791,6 +794,12 @@ namespace SistemaVentasJones.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("Cambio")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("CantidadPagada")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int?>("ClienteId")
                         .HasColumnType("int");

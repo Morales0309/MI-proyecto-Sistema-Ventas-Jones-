@@ -11,9 +11,10 @@
     <div class="input-group" style="width:60%">
         <input class="form-control" type="date" placeholder="Fecha venta" @bind="FechaFiltro" />
         <input class="form-control" type="text" placeholder="Nombre empleado" @bind="EmpleadoFiltro" />
+        <input class="form-control flex-grow-1" type="number" min="0" step="1" placeholder="Número de factura" @bind="NumeroFacturaFiltro" />        
         <div class="input-group-append">
             <button @onclick="Filtrar" class="btn btn-primary" type="button"><i class="oi oi-magnifying-glass"></i></button>
-            <button @onclick="Limpiar" class="btn btn-danger" type="button"><i class="oi oi-delete"></i></button>
+            <button @onclick="Limpiar" class="btn btn-danger" type="button"><i class="oi oi-delete"></i></button>           
         </div>
     </div>
 </div>
@@ -76,6 +77,9 @@ else
 }
 @code {
     public List<Venta> ventas { get; set; }
+    public List<Venta> ListaVentas { get; set; } = new List<Venta>();
+
+
     private bool hover = true;
     private bool striped = true;
     private bool bordered = true;
@@ -85,6 +89,13 @@ else
 
     private DateTime FechaFiltro = DateTime.Today.AddDays(+1);
     private string EmpleadoFiltro = String.Empty;
+    private string NumeroFacturaFiltro = String.Empty;
+
+
+    private async Task FiltrarBuscar()
+    {
+        await CargarVentas();
+    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -102,7 +113,7 @@ else
     {
         string fecha = Convert.ToString(FechaFiltro);
 
-        var httpResponse = await Http.GetAsync($"api/ventas/filtro?empleado={EmpleadoFiltro}&fecha={fecha}");
+        var httpResponse = await Http.GetAsync($"api/ventas/filtro?empleado={EmpleadoFiltro}&fecha={fecha}&numFactura={NumeroFacturaFiltro}");
         if (httpResponse.IsSuccessStatusCode)
         {
             var responseString = await httpResponse.Content.ReadAsStringAsync();

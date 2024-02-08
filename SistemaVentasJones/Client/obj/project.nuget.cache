@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4/X2NJEUIzUtLIEgaibMTi7Q9c4dmE3h288qrFKAvYI+rydtL1wtX++pt97j+NF4ymAB1TwJcYsTaFgxN5+5vQ==",
+  "dgSpecHash": "Nh53NrDAUV4ANakm0Wle9I7mXqg2R0T+wHDPzf8jd40HNf9th7owR1uFkN7b2ko8qPhIgtnFb4DWk4EOl77fmQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
+  "projectFilePath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ender\\.nuget\\packages\\csvhelper\\12.2.0\\csvhelper.12.2.0.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\epplus\\5.4.1\\epplus.5.4.1.nupkg.sha512",

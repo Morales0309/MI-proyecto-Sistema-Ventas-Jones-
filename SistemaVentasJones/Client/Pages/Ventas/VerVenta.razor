@@ -4,21 +4,21 @@
 @inject IJSRuntime JS
 @attribute [Authorize(Roles = "admin, empleado")]
 
+
 @using System.Text.Json
 
 
 <div class="d-flex justify-content-between mb-2">
     <div class="btn-group">
-        <button id="miboton" class="btn btn-sm btn-secondary" @onclick="@Volver">
+        <button id="miboton" class="btn btn-sm btn-secondary d-print-none" @onclick="@Volver">
             <i class="oi oi-arrow-circle-left"></i> Volver atrás
         </button>
-        <button id="miboton" class="btn btn-sm btn-primary" onclick="window.print()">
-         Imprimir
+        <button id="miboton" class="btn btn-sm btn-primary d-print-none" onclick="window.print()">
+            Imprimir
         </button>
-        <button id="miboton" class="btn btn-sm btn-primary" @onclick="@NuevaVenta">
-           Nueva venta
+        <button id="miboton" class="btn btn-sm btn-primary d-print-none" @onclick="@NuevaVenta" V>
+            Nueva venta
         </button>
-       
     </div>
     <div class="btn-group">
     </div>
@@ -36,7 +36,7 @@
             <div class="informacion-fija">
                 <small class="lema">ACJONES, Lo mejor en accesorios para tu vehiculo </small> <br /><br />
                 <small><b>Dirección:</b>@ListaAjustes.Direccion</small><br />
-                <small><b>N° factura:</b> @venta.Numero.ToString("D8")</small><br />
+                <small><b>N° factura:</b> @venta.Numero.ToString("D5")</small><br />
                 <small><b>RUC:</b> @ListaAjustes.RUC</small> <br />
                 <small><b>Teléfono:</b> @ListaAjustes.Telefono</small><br />
                 <small><b>Email:</b> @ListaAjustes.Email</small> <br />
@@ -49,7 +49,8 @@
             <div class="info-cliente">
                 @if (venta.ClienteId != null)
                 {
-                    <hr />
+                    <hr class="short-line" />
+                    <hr class="short-line" />
                     <div>
                         @if (venta.ClienteId != null)
                         {
@@ -59,56 +60,68 @@
                         {
                             <small><b>Cliente:</b> CLIENTE GENÉRICO</small> <br />
                         }
-                        <small><b>Dirección:</b> @venta.Cliente.Dirección</small> <br />
+                     
                         <small><b>Teléfono:</b> @venta.Cliente.Teléfono</small>
                     </div>
+                   
                 }
+                <hr class="short-line" />
+                <hr class="short-line" />
+            </div>  
+            <div>
+                
             </div>
 
 
-            <hr />
-
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th><small>Descripción</small></th>
-                        <th><small>Precio</small></th>
-                        <th><small>Cantidad</small></th>
-                        <th><small>Descuento</small></th>
-                     @*   <th><small>Iva</small></th>*@
-                        <th><small>Subtotal</small></th>
-                    </tr>
-                </thead>
-                <tbody>
+  
+            <div class="invoice">
+                <div class="header">
+                    <h2>Detalle de Compra</h2>
+                    
+                </div>
+                <div class="items">
                     @foreach (var item in venta.DetalleVentas)
                     {
-                        <tr>
-                            <td style="text-transform:uppercase"><small>@item.Articulo.Nombre</small></td>
-                            <td><small>C$ @item.Precio</small></td>
-                            <td><small>@item.Cantidad</small></td>
-                            <td><small>@item.Descuento %</small></td>
-                           @* <td><small>C$ @item.IvaAlternativo.ToString("#.##") </small></td>*@
-                            <td><small>C$ @item.SubTotal</small></td>
-                        </tr>
+                        <div class="item">
+                            <div class="description">
+                                <p>@item.Articulo.Nombre</p>
+                            </div>
+                            <div class="price">
+                                <p>Precio: C$ @item.Precio</p>
+                            </div>
+                            <div class="quantity">
+                                <p>Cantidad: @item.Cantidad</p>
+                            </div>
+                            <div class="discount">
+                                <p>Descuento: @item.Descuento %</p>
+                            </div>
+                            <div class="subtotal">
+                                <p>Subtotal: C$ @item.SubTotal</p>
+                            </div>
+                        </div>
                     }
-                </tbody>
-            </table>
-            <p class="card-text text-right m-4">
-                @if (venta.FormaPago == FormasPago.Cordoba)
-                {
-                    <h6><b>TOTAL</b></h6>
-                    <h5><b>C$ @Math.Round(venta.Total, 2)</b></h5>
-                }
-                else
-                {
-                    <h6><b>TOTAL</b></h6>
-                    <h5><b>U$ @Math.Round(venta.TotalDolares, 2)</b></h5>
-                    <h5><b>C$ @Math.Round(venta.Total, 2) | T/C: @venta.TasaCambio</b></h5>
-                }
+                </div>
+                <p class="card-text">
+                    @if (venta.FormaPago == FormasPago.Cordoba)
+                    {
+                        <h6><b>TOTAL</b></h6>
+                        <h5><b>C$ @Math.Round(venta.Total, 2)</b></h5>
+                    }
+                    else
+                    {
+                        <h6><b>TOTAL</b></h6>
+                        <h5><b>U$ @Math.Round(venta.TotalDolares, 2)</b></h5>
+                        <h5><b>C$ @Math.Round(venta.Total, 2) | T/C: @venta.TasaCambio</b></h5>
+                    }
 
-            </p>
+                </p>
+            </div>
+
+           
         </div>
     </div>
+
+
 }
 
 @code {
@@ -167,9 +180,8 @@
 }
 <style>
     body {
-        font-family: 'Arial', sans-serif;
+        font-family: 'Book Antiqua', sans-serif;
     }
-
     .d-flex {
         display: flex;
     }
@@ -179,7 +191,7 @@
     }
 
     .mb-2 {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .btn-group {
@@ -189,13 +201,15 @@
     #miboton {
         margin-right: 1rem;
     }
+    
+      
+    
 
     .card {
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-color: #fff;
+        border-style: dotted;
+        box-shadow: 22px 3px 39px 1px rgba(0,0,0,0.51);
         margin: 1rem;
-        padding: 1rem;
     }
 
     .img-fluid {
@@ -204,30 +218,26 @@
     }
 
     .lema {
-        font-size: 0.8rem;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #666;
+        font-size: small;
     }
 
     .info-cliente hr {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        border-color: #ccc;
     }
 
     .table {
         width: 100%;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        color: #333;
-        border-collapse: collapse;
+        color: #212529;
     }
 
         .table th,
         .table td {
             padding: 0.75rem;
             vertical-align: top;
-            border: 1px solid #ccc;
+            border-top: 1px solid #dee2e6;
         }
 
     .text-right {
@@ -237,4 +247,11 @@
     .m-4 {
         margin: 1.5rem;
     }
+
+    .short-line {
+        width: 25%;
+        margin: 0px 0 0px 0px;
+        border: 0.5px solid #ccc;
+    }
 </style>
+   

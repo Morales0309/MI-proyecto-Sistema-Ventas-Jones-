@@ -44,6 +44,15 @@ namespace SistemaVentasJones.Shared
             }
             set { }
         }
+        public decimal CantidadPagada { get; set; }
+        public decimal Cambio
+        { 
+            get 
+            {
+                return CantidadPagada - Total;
+            }
+            set { } }
+
         #endregion
     }
 

@@ -31,13 +31,15 @@ else
         <HeaderContent>
             <MudTh>Nombre</MudTh>
             <MudTh>Apellido</MudTh>
+            <MudTh>Cédula de identidad</MudTh>
             <MudTh>Email</MudTh>
             <MudTh>Usuario</MudTh>
-            <MudTh>Teléfono</MudTh>
+            @*<MudTh>Teléfono</MudTh>*@
         </HeaderContent>
         <RowTemplate>            
             <MudTd DataLabel="Nombre">@context.NombreyApellido</MudTd>
             <MudTd DataLabel="Apellido">@context.Apellido</MudTd>
+            <MudTd DataLabel="Cedula">@context.Cedula</MudTd>
             <MudTd DataLabel="Email">@context.Email</MudTd>
             <MudTd DataLabel="User name">@context.UserName</MudTd>
             <MudTd DataLabel="Telefono">@context.PhoneNumber</MudTd>

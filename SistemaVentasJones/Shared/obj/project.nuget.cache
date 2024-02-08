@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ydBgzLfXyf6i+j6HIZn9lVHOo8tLFUcLlbAE6KO/Riks+LJXwDXPRKibaD7eSXtJgrivSgebvd+s90PnHthG8g==",
+  "dgSpecHash": "Q7y4aS+D9xWRNYajrS61a1sfoIgpgQA4S8CULzxlrvpwesyJqzUK+E0rIkmoaegZkJGOmwKo9SvemrhqOh7gLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ender\\Music\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
+  "projectFilePath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ender\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.7\\microsoft.aspnetcore.cryptography.internal.5.0.7.nupkg.sha512",
     "C:\\Users\\ender\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.7\\microsoft.aspnetcore.cryptography.keyderivation.5.0.7.nupkg.sha512",

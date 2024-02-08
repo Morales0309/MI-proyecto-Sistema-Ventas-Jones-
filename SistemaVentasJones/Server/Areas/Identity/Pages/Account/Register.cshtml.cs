@@ -74,6 +74,12 @@ namespace SistemaVentasJones.Server.Areas.Identity.Pages.Account
             [StringLength(120)]
             [Display(Name = "Apellido")]
             public string Apellido { get; set; }
+            
+            [RegularExpression(@"^\d{3}-\d{6}-\d{4}[A-Z]$", ErrorMessage = "El formato de la cédula no es válido.")]
+            [StringLength(20)]
+            [Display(Name = "Cedula")]
+            public string Cedula { get; set; }
+
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -86,22 +92,17 @@ namespace SistemaVentasJones.Server.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, NombreyApellido = Input.NombreyApellido };
+                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, NombreyApellido = Input.NombreyApellido, Cedula = Input.Cedula, Apellido = Input.Apellido };
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     if ((_userManager.GetUsersInRoleAsync("Admin").Result.Count() == 0) && user.NombreyApellido == "Admin")
                     {
-                        ///crea roles
-                        await _roleManager.CreateAsync(new IdentityRole("Admin"));
-                        await _roleManager.CreateAsync(new IdentityRole("Propietario"));
-                        await _roleManager.CreateAsync(new IdentityRole("Empleado"));
-
-                        //asigna rol de admin al primer usuario
-                        await _userManager.AddToRoleAsync(user, "Admin");
+                        // Código para crear roles y asignar rol de admin
                     }
 
                     _logger.LogInformation("User created a new account with password.");
@@ -123,13 +124,17 @@ namespace SistemaVentasJones.Server.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        // Comenta o elimina la siguiente línea para evitar iniciar sesión automáticamente
+                        // await _signInManager.SignInAsync(user, isPersistent: false);
+
                         return LocalRedirect(returnUrl);
                     }
                 }
+
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
+                    _logger.LogError($"Error creating user: {error.Description}");
                 }
             }
 
@@ -137,4 +142,5 @@ namespace SistemaVentasJones.Server.Areas.Identity.Pages.Account
             return Page();
         }
     }
+
 }
