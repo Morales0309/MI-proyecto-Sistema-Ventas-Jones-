@@ -12,17 +12,17 @@ namespace SistemaVentasJones.Server.Areas.Identity.Pages.Account.Manage
 
         public static string Email => "Email";
 
-        public static string ChangePassword => "ChangePassword";
+        public static string ChangePassword => "Cambiar contraseña";
 
-        public static string DownloadPersonalData => "DownloadPersonalData";
+        public static string DownloadPersonalData => "Descargar datos personales";
 
-        public static string DeletePersonalData => "DeletePersonalData";
+        public static string DeletePersonalData => "Borrar datos personales";
 
         public static string ExternalLogins => "ExternalLogins";
 
-        public static string PersonalData => "PersonalData";
+        public static string PersonalData => "Datos personales";
 
-        public static string TwoFactorAuthentication => "TwoFactorAuthentication";
+        public static string TwoFactorAuthentication => "Autenticación de dos factores";
 
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
 

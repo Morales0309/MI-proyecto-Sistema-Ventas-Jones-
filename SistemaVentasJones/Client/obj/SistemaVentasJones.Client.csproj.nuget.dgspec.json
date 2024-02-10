@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {}
+    "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {
+    "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
+        "projectUniqueName": "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
         "projectName": "SistemaVentasJones.Client",
-        "projectPath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
+        "projectPath": "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj",
         "packagesPath": "C:\\Users\\ender\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Client\\obj\\",
+        "outputPath": "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ender\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
-                "projectPath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj"
+              "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
+                "projectPath": "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj"
               }
             }
           }
@@ -113,14 +113,14 @@
         }
       }
     },
-    "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
+    "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
         "projectName": "SistemaVentasJones.Shared",
-        "projectPath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
+        "projectPath": "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj",
         "packagesPath": "C:\\Users\\ender\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ender\\Music\\Luis\\SistemaVentasJones\\SistemaVentasJones\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\ender\\Music\\Luis\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ender\\AppData\\Roaming\\NuGet\\NuGet.Config",

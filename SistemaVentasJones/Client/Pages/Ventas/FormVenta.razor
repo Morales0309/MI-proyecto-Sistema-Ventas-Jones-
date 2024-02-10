@@ -55,7 +55,7 @@
             <tr>
                 <th>Artículo</th>
                 <th>Cantidad</th>
-                <th>Descuento</th>
+                <th>Descuento %</th>
                 <th>Subtotal</th>
                 <th>Acciones</th>
             </tr>
@@ -101,7 +101,7 @@
                             <ValidationMessage For="@(() => detalle.Descuento)" />
                     </td>
                     <td>
-                       C$ @Math.Round(detalle.SubTotal,2)
+                       C$ @Math.Round(detalle.SubtotalConDescuento,2)
                     </td>
                     <td>
                         <button type="button" @onclick="@(() => venta.DetalleVentas.RemoveAt(indice))" class="btn btn-danger btn-sm" style="border-radius:10px">
@@ -137,7 +137,7 @@
             <div class="mb-3">
                 <label for="vuelto">Vuelto:</label>
                @* <input type="text" min="0" id="vuelto"  readonly value="@Math.Round(vuelto, 2)" class="form-control" />*@
-                <MudNumericField id="vuelto" @bind-Value="vuelto" Label="Cambio de su dinero" Variant="Variant.Outlined"
+                <MudNumericField id="Cambio" @bind-Value="venta.Cambio" Label="Cambio de su dinero" Variant="Variant.Outlined"
                                 ReadOnly="true"  Min="0"  Step="10" />
             </div>
         </div>
@@ -176,8 +176,9 @@
 
     public int cantidadmax { get; set; } //cantidad maxima de un articulo por su stock
     private decimal cantidadPagada = 0;
-    private decimal vuelto = 0;
+    private decimal Cambio = 0;
 
+   
 
     decimal CalcularTotal()
     {
@@ -194,7 +195,7 @@
         // Calcular vuelto (si se ha ingresado una cantidad pagada)
         if (cantidadPagada > 0)
         {
-            vuelto = cantidadPagada - venta.Total;
+            Cambio = cantidadPagada - venta.Total;
         }
 
 
@@ -202,7 +203,7 @@
     }
     public void CalcularVuelto()
     {
-        vuelto = venta.CantidadPagada - venta.Total;
+        Cambio = venta.CantidadPagada - venta.Total;
     }
 
 

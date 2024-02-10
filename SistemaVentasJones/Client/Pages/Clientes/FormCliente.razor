@@ -2,7 +2,7 @@
 <EditForm Model="@cliente" OnValidSubmit="@OnValidSubmit">
     <div class="form-field mt-2 mb-2">
         <div class="form-group row">
-            <label class="col-3 col-form-label">Nombre</label>
+            <label class="col-3 col-form-label">Nombre*</label>
             <div class="col">
                 <div class="input-group">
                     <InputText @bind-Value="@cliente.Nombre" oninput="this.value=this.value.toUpperCase()" placeholder="Nombre" class="form-control" />
@@ -12,7 +12,7 @@
         </div>
 
         <div class="form-group row">
-            <label class="col-3 col-form-label">Apellido</label>
+            <label class="col-3 col-form-label">Apellido*</label>
             <div class="col">
                 <div class="input-group">
                     <InputText @bind-Value="@cliente.Apellido" oninput="this.value=this.value.toUpperCase()" placeholder="Apellido" class="form-control" />
@@ -22,10 +22,10 @@
         </div>
 
         <div class="form-group row">
-            <label class="col-3 col-form-label">Cédula</label>
+            <label class="col-3 col-form-label">Cédula*</label>
             <div class="col">
                 <div class="input-group">
-                    <InputText @bind-Value="@cliente.Cedula" placeholder="Cédula" oninput="this.value=this.value.toUpperCase()" class="form-control"/>
+                    <InputText @bind-Value="@cliente.Cedula" placeholder="Formato de cedula 0000000000000A" oninput="this.value=this.value.toUpperCase()" class="form-control"/>
                 </div>
                 <ValidationMessage For="@(() => cliente.Cedula)" />
             </div>            
@@ -49,7 +49,7 @@
 
 
         <div class="form-group row">
-            <label class="col-3 col-form-label">Dirección</label>
+            <label class="col-3 col-form-label">Dirección*</label>
             <div class="col">
                 <div class="input-group">
                    <MudTextField @bind-Value="@cliente.Dirección" Label="Dirección"
@@ -61,7 +61,7 @@
         </div>
 
         <div class="form-group row">
-            <label class="col-3 col-form-label">Teléfono</label>
+            <label class="col-3 col-form-label">Teléfono*</label>
             <div class="col">
                 <div class="input-group">
                     <InputText @bind-Value="@cliente.Teléfono" class="form-control" oninput="this.value=this.value.toUpperCase()" placeholder="Teléfono" />

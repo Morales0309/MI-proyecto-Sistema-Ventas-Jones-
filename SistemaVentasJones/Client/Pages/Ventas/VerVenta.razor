@@ -8,6 +8,7 @@
 @using System.Text.Json
 
 
+
 <div class="d-flex justify-content-between mb-2">
     <div class="btn-group">
         <button id="miboton" class="btn btn-sm btn-secondary d-print-none" @onclick="@Volver">
@@ -96,12 +97,37 @@
                                 <p>Descuento: @item.Descuento %</p>
                             </div>
                             <div class="subtotal">
-                                <p>Subtotal: C$ @item.SubTotal</p>
+                                <p>Subtotal con descuento: C$ @Math.Round(@item.TotalFinal, 2)</p>
                             </div>
+                           
                         </div>
+
+                       
                     }
                 </div>
+                <hr class="short-line" />
+                <br>
+                <hr class="short-line" />
+                <br>
                 <p class="card-text">
+                    <div class="cantidad pagada">
+                        <p> Paga con: C$ @venta.CantidadPagada</p>
+                    </div>
+                    <div class="cantidad pagada">
+                        <p> Cambio: C$ @venta.Cambio</p>
+                    </div>
+                  
+                                    
+                    @foreach (var item in venta.DetalleVentas)
+                    {
+                        <div class="item">
+                            <div class="description">
+                                <p> Subtotal sin descuento: @Math.Round(@item.SubTotal,2)</p>
+                            </div>                                                 
+                        </div>
+                       
+                    }
+
                     @if (venta.FormaPago == FormasPago.Cordoba)
                     {
                         <h6><b>TOTAL</b></h6>
@@ -113,7 +139,8 @@
                         <h5><b>U$ @Math.Round(venta.TotalDolares, 2)</b></h5>
                         <h5><b>C$ @Math.Round(venta.Total, 2) | T/C: @venta.TasaCambio</b></h5>
                     }
-
+                   
+                    
                 </p>
             </div>
 

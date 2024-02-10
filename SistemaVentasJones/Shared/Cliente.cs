@@ -45,7 +45,7 @@ namespace SistemaVentasJones.Shared
         {
             Masculino = 1,
             Femenino = 2, 
-            No_Especifica = 3
+        
         }
         #endregion
     }

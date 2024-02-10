@@ -29,7 +29,7 @@ namespace SistemaVentasJones.Shared
         public int Descuento { get; set; } = 0;
         public decimal SubTotal => Precio * Cantidad;
         public decimal SubtotalConDescuento => SubTotal * (Descuento / 100M);
-
+        
         public decimal TotalFinal => SubTotal - SubtotalConDescuento;
 
         [Required]

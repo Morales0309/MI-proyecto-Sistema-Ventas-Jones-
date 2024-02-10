@@ -7,10 +7,10 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-group row">
-                    <label class="col-4 col-form-label">Nombre</label>
+                    <label class="col-4 col-form-label">Entidad*</label>
                     <div class="col">
                         <div class="input-group">
-                            <MudTextField @bind-Value="@Proveedores.Nombre" Label="Nombre" Variant="Variant.Outlined" oninput="this.value=this.value.toUpperCase()"
+                            <MudTextField @bind-Value="@Proveedores.Nombre" Label="Entidad" Variant="Variant.Outlined" oninput="this.value=this.value.toUpperCase()"
                                           Margin="Margin.Dense"></MudTextField>
                         </div>
                         <ValidationMessage For="@(() => Proveedores.Nombre)" />

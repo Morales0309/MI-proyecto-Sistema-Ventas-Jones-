@@ -3,6 +3,7 @@
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JS
 @inject ISnackbar Snackbar
+
 @attribute [Authorize(Roles = "admin")]
 
 <div class="d-flex justify-content-between mb-3">
@@ -14,9 +15,16 @@
     <div>
         <h3><b>Nuevo artículo</b></h3>
     </div>
+
+  
 </div>
 
+
+
+
 <FormArticulo TextBotonSubmit="Agregar artículo" OnValidSubmit="@CrearArtic" articulo="@articulo"/>
+
+
 
 @code {
     Articulo articulo = new Articulo();
@@ -41,8 +49,10 @@
         }
     }
 
+
     void Volver()
     {
         NavigationManager.NavigateTo("/lista-articulos");
     }
+ 
 }
