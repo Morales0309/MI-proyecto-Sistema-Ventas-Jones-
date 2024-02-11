@@ -4892,3 +4892,11 @@ C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\C
 C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\refint\SistemaVentasJones.Client.dll
 C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\SistemaVentasJones.Client.pdb
 C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\ref\SistemaVentasJones.Client.dll
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\CrearUsuarios.razor.g.cs
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\EditarUsuarios.razor.g.cs
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\FormularioUsuarios.razor.g.cs
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\ListaUsuarios.razor.g.cs
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\CrearUsuarios.razor.g.cs
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\EditarUsuarios.razor.g.cs
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\FormularioUsuarios.razor.g.cs
+C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\ListaUsuarios.razor.g.cs

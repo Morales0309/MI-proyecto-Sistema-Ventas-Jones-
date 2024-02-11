@@ -187,7 +187,7 @@ using Microsoft.AspNetCore.Identity;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Components.RouteAttribute("/lista-usuarios")]
+    [global::Microsoft.AspNetCore.Components.RouteAttribute("/lista-usuario")]
     public partial class ListaUsuarios : global::Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

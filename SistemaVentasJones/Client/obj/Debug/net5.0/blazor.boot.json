@@ -212,13 +212,14 @@
       "netstandard.dll": "sha256-W3q3PN+lpRB+tRJEIhtMgYOGFv0pauEeeCS9iIRkKAM=",
       "System.Private.CoreLib.dll": "sha256-9rUJv1mXEQdGt\/kWiJ1ITPPzp3cAi3lSmqHVTisp7w0=",
       "SistemaVentasJones.Shared.dll": "sha256-7RJxVqr0nB+FclR+Qcrk7aYzIG04ahyN44uZKt9jhe8=",
-      "SistemaVentasJones.Client.dll": "sha256-PhE1uRd+VaCxsIZ2OiGmabUwiH9OXWLlaItgRWHwr7c="
+      "SistemaVentasJones.Client.dll": "sha256-oumce28SW\/kykYoMnRQiwrft4TkPEncKftXnCol9wIY="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "SistemaVentasJones.Client.pdb": "sha256-0cErrv2CKFx+xZnwRHbDNpxiCtRMR9n\/FeeoN1oGEQk="
+      "SistemaVentasJones.Shared.pdb": "sha256-mv4xB+V5wk4xh9H\/a1fgTiTQ3vEDmvI1MH46qXPzv2k=",
+      "SistemaVentasJones.Client.pdb": "sha256-vA8XkrzvFq91g4LqepJiqRSAi455DjHFUFPbBWRqEu4="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-8oJip361m8OrfLRJOuIeswWKaoxtT27\/wINCxhn+s4c=",
