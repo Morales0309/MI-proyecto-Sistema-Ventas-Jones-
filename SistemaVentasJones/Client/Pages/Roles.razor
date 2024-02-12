@@ -27,12 +27,12 @@
     </div>
     <div class="btn-group btn-block">        
         <MudButton @onclick="@(() => AccionRol(nombreRol, usuarioId, false))" Variant="Variant.Filled"
-                   Color="Color.Primary" FullWidth="true">Eliminar rol</MudButton>
+                   Color="Color.Secondary" FullWidth="true">Eliminar rol</MudButton>
     </div>
-    <div class="btn-group btn-block my-2">
+    @*@<div class="btn-group btn-block my-2">
         <MudButton Link="/authentication/register" Variant="Variant.Filled"
                    Color="Color.Primary" FullWidth="true">Registrar nuevo usuario</MudButton>
-    </div>
+    </div>*@
 </div>
 
 @code {
@@ -41,6 +41,7 @@
 
     private string nombreRol { get; set; }
     private string usuarioId { get; set; }
+    private string UserName { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -64,7 +65,7 @@
             }
 
             var confirmacion = await JS.InvokeAsync<bool>("confirmar", mensaje,
-        $"Usuario: {usuarioId}. Rol:{nombreRol}", "question");
+        $"Usuario: {UserName}. Rol:{nombreRol}", "question");
             if (confirmacion)
             {
                 var rol = await Http.GetFromJsonAsync<IdentityRole>($"api/roles/rol/" + nombreRol);

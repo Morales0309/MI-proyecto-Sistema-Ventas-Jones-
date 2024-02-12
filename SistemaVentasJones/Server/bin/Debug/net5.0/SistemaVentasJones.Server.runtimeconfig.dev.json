@@ -1,8 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\ender\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ender\\.nuget\\packages"
+      "C:\\Users\\Lenovo i5 12va Gen\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Lenovo i5 12va Gen\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ]
   }
 }

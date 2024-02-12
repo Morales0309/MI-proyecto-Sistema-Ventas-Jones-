@@ -6,10 +6,13 @@
 
 @using System.Text.Json
 
-<MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Create" Color="Color.Success" Size="Size.Medium">
+@*@<MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Create" Color="Color.Success" Size="Size.Medium">
     <a style="text-decoration:none; color:#fff;" @onclick="CrearUsuario">Agregar usuario</a>
-</MudButton>
-
+</MudButton>*@
+<div class="btn-group btn-block my-2">
+    <MudButton Link="/authentication/register" Variant="Variant.Filled"
+               Color="Color.Success"Size="Size.Medium" Style="text-decoration :none;" >Registrar nuevo usuario</MudButton>
+</div>
 @if (applicationUsers == null)
 {
     <div class="d-flex justify-content-center align-items-center" style="height:24rem">

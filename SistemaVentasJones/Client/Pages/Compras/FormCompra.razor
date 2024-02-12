@@ -42,7 +42,7 @@
                                 <option selected value="">Seleccione un artículo</option>
                                 @foreach (var articulo in articulos)
                                     {
-                                    <option value="@articulo.Id">@articulo.Nombre | C$@articulo.PrecioMayorista | STOCK: @articulo.StockActual</option>
+                                    <option value="@articulo.Id">@articulo.Nombre |Precio Compra: C$@articulo.PrecioMayorista | STOCK: @articulo.StockActual |Precio Venta: C$@articulo.PrecioUnitario  </option>
                                     }
                             </InputSelect>
                             <ValidationMessage For="@(() => detalle.ArticuloId)" />

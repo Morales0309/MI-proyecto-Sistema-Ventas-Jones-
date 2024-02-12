@@ -8,6 +8,11 @@
 <button @onclick="@Volver" class="btn btn-sm btn-secondary">
     <i class="oi oi-arrow-circle-left"></i> Volver al listado
 </button>
+@*
+<button @onclick="@EliminarUsuario" class="btn btn-sm btn-danger">
+    <i class="oi oi-trash"></i> Eliminar
+</button>*@
+
 
 <hr />
 
@@ -57,4 +62,27 @@
             }
         }
     }
+
+    //async Task EliminarUsuario()
+   /* {
+         var confirmacion = await JS.InvokeAsync<bool>("confirmar", "Eliminar",
+             $"¿Desea eliminar a {applicationUser.Id}?", "error");
+         if (confirmacion)
+             {
+             var respuesta = await Http.DeleteAsync($"/api/usuarios/{idUsuarios}");
+
+             if (respuesta.IsSuccessStatusCode)
+                 {
+                 NavigationManager.NavigateTo("/lista-usuarios");
+                 Snackbar.Add("Usuario eliminado con éxito", Severity.Success,
+                     a => a.VisibleStateDuration = 200);
+             }
+             else
+                 {
+                 Snackbar.Add("Ha ocurrido un error al eliminar el usuario", Severity.Error);
+         }
+             }
+    }/**/
+
+
 }

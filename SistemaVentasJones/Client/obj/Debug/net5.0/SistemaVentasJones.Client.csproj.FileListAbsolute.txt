@@ -4900,3 +4900,11 @@ C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\C
 C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\EditarUsuarios.razor.g.cs
 C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\FormularioUsuarios.razor.g.cs
 C:\Users\ender\Music\Luis\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\ListaUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\CrearUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\EditarUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\FormularioUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Usuarios\ListaUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\CrearUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\EditarUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\FormularioUsuarios.razor.g.cs
+C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Pages\Usuarios\ListaUsuarios.razor.g.cs
