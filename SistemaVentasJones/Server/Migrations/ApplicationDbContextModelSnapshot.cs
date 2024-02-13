@@ -152,14 +152,14 @@ namespace SistemaVentasJones.Server.Migrations
                         new
                         {
                             Id = "89086180-b978-4f90-9dbd-a7040bc93f41",
-                            ConcurrencyStamp = "0b435f7a-c64d-4627-9c28-f6f67ff8eb1e",
+                            ConcurrencyStamp = "5315504b-171e-4dc6-bc9b-5570def5a054",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
                             Id = "65ade53a-ce03-411e-9d35-08fca7f47014",
-                            ConcurrencyStamp = "ff0da501-6f7c-44b4-9f24-6d7949fa4de8",
+                            ConcurrencyStamp = "c52b835b-a790-44d2-bf70-475f760aaa84",
                             Name = "empleado",
                             NormalizedName = "empleado"
                         });
@@ -489,6 +489,11 @@ namespace SistemaVentasJones.Server.Migrations
                         .HasMaxLength(16)
                         .HasColumnType("nvarchar(16)");
 
+                    b.Property<string>("Ciudad")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<string>("Dirección")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -684,6 +689,11 @@ namespace SistemaVentasJones.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Ciudad")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Direccion")
                         .HasMaxLength(500)

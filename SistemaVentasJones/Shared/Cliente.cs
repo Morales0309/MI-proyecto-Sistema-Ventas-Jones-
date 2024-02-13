@@ -29,10 +29,17 @@ namespace SistemaVentasJones.Shared
         public string Cedula { get; set; }
         [Required, EnumDataType(typeof(Sexos))]        
         public Sexos Sexo { get; set; }
+
+        [Required(ErrorMessage = "Ingresa un texto váñido")]
+        [StringLength(500)]
+        [MaxLength(500, ErrorMessage = "Máximo 500 dígitos"), MinLength(2, ErrorMessage = "Minimo 2 dígitos")]
+        public string Ciudad { get; set; }
+
         [Required(ErrorMessage = "Elija una de las opciones")]
         [StringLength(500)]
         [MaxLength(500, ErrorMessage = "Máximo 500 dígitos"), MinLength(2, ErrorMessage = "Minimo 2 dígitos")]
-        public string Dirección { get; set; }
+        public string Dirección { get; set; }       
+
         [Required(ErrorMessage = "Debe ingesar un número de {0}")]
         [StringLength(20)]
         [MaxLength(20, ErrorMessage = "Máximo 20 dígitos"), MinLength(2, ErrorMessage = "Minimo 2 dígitos")]
