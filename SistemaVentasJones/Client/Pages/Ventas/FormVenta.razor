@@ -101,7 +101,7 @@
                             <ValidationMessage For="@(() => detalle.Descuento)" />
                     </td>
                     <td>
-                       C$ @Math.Round(detalle.SubtotalConDescuento,2)
+                       C$ @Math.Round(detalle.SubTotal,2)
                     </td>
                     <td>
                         <button type="button" @onclick="@(() => venta.DetalleVentas.RemoveAt(indice))" class="btn btn-danger btn-sm" style="border-radius:10px">
