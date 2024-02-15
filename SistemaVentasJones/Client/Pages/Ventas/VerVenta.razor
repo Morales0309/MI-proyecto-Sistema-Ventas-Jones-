@@ -85,7 +85,7 @@
                     {
                         <div class="item">
                             <div class="description">
-                                <p>@item.Articulo.Nombre</p>
+                                <p><strong>@item.Articulo.Nombre</strong></p>
                             </div>
                             <div class="price">
                                 <p>Precio: C$ @item.Precio</p>
@@ -118,7 +118,7 @@
                     </div>*@
                   
                                     
-                    @foreach (var item in venta.DetalleVentas)
+                  @**  @foreach (var item in venta.DetalleVentas)
                     {
                         <div class="item">
                             <div class="description">
@@ -126,7 +126,7 @@
                             </div>                                                 
                         </div>
                        
-                    }
+                    }@**@
 
                     @if (venta.FormaPago == FormasPago.Cordoba)
                     {
@@ -206,9 +206,7 @@
 
 }
 <style>
-    body {
-        font-family: Consolas;
-    }
+  
     .d-flex {
         display: flex;
     }
