@@ -189,7 +189,7 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 70 "C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Usuarios\ListaUsuarios.razor"
+#line 72 "C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Usuarios\ListaUsuarios.razor"
        
     private bool dense = false;
     private bool hover = true;

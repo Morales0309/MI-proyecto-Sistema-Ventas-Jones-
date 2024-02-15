@@ -197,7 +197,7 @@ using Microsoft.JSInterop;
     async Task CrearVent()
     {
         var confirmacion = await JS.InvokeAsync<bool>("confirmar", "¿Finalizar venta?",
-            $"Total: C${Math.Round(venta.Total, 2)} | Total U$ {Math.Round(venta.TotalDolares, 2)} | Cambio C${Math.Round(venta.Cambio, 2)}", "question");
+            $"Total: C${Math.Round(venta.Total, 2)}", "question");
         if (confirmacion)
         {
             var respuesta = await Http.PostAsJsonAsync("api/ventas", venta);

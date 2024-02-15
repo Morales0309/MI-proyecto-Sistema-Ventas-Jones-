@@ -45,7 +45,8 @@ else
             <MudTh>Cédula</MudTh>
             <MudTh>Teléfono</MudTh>
             <MudTh>Email</MudTh>
-            <MudTh>Nombre de usuario</MudTh>            
+            <MudTh>Nombre de usuario</MudTh>
+        
             <MudTh>Acciones</MudTh>
 
         </HeaderContent>
@@ -56,6 +57,7 @@ else
             <MudTd DataLabel="Teléfono">@context.PhoneNumber</MudTd>
             <MudTd DataLabel="Email">@context.Email</MudTd>
             <MudTd DataLabel="Usuario">@context.UserName</MudTd>
+           
             <MudTd>
                 <MudFab Color="Color.Error" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small"
                     @onclick="@(() => NavigationManager.NavigateTo($"/editar-usuarios/{context.Id}"))" />

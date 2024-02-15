@@ -181,7 +181,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 156 "C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
+#line 142 "C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Ventas\FormVenta.razor"
        
     [Parameter] public Venta venta { get; set; } = new Venta();
     [Parameter] public DetalleVenta detalleVentas { get; set; } = new DetalleVenta();

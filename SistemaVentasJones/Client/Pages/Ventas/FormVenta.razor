@@ -6,7 +6,7 @@
 
 <EditForm Model="@venta" OnValidSubmit="OnValidSubmit">
     <div class="form-field mt-2 mb-2">
-        <div class="form-group row">
+        @*<div class="form-group row">
             <MudGrid>
     <MudItem sm="12" md="6">
                     <MudRadioGroup T="FormasPago" @bind-Value="venta.FormaPago" Orientation="Orientation.Horizontal">
@@ -21,7 +21,7 @@
                     </MudRadioGroup>
             </MudItem>
             </MudGrid>
-        </div>
+        </div>*@
 
 
         <div class="form-group row" hidden="@ocultaclientes">
@@ -126,21 +126,7 @@
             </button>
         </div>
 
-        <div class="card p-3">
-            <div class="mb-3">
-                <label for="cantidadPagada">Paga con la cantidad de:</label>                
-                @*<input type="number" min="0" id="CantidadPagada" @bind-value="@venta.CantidadPagada" class="form-control" />*@ 
-                <MudNumericField @bind-Value="venta.CantidadPagada" Label="Cantidad pagada" Variant="Variant.Outlined"
-                                 Min="@detalleVentas.SubtotalConDescuento" Step="10" />
-            </div>
-           
-            <div class="mb-3">
-                <label for="vuelto">Vuelto:</label>
-               @* <input type="text" min="0" id="vuelto"  readonly value="@Math.Round(vuelto, 2)" class="form-control" />*@
-                <MudNumericField id="Cambio" @bind-Value="venta.Cambio" Label="Cambio de su dinero" Variant="Variant.Outlined"
-                                ReadOnly="true"  Min="0"  Step="10" />
-            </div>
-        </div>
+        
 
 
 

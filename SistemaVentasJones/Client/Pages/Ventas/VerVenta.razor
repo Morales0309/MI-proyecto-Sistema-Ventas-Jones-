@@ -110,12 +110,12 @@
                 <hr class="short-line" />
                 <br>
                 <p class="card-text">
-                    <div class="cantidad pagada">
+                   @* <div class="cantidad pagada">
                         <p> Paga con: C$ @venta.CantidadPagada</p>
-                    </div>
-                    <div class="cantidad pagada">
+                    </div>*@
+                   @* <div class="cantidad pagada">
                         <p> Cambio: C$ @venta.Cambio</p>
-                    </div>
+                    </div>*@
                   
                                     
                     @foreach (var item in venta.DetalleVentas)
@@ -207,7 +207,7 @@
 }
 <style>
     body {
-        font-family: 'Book Antiqua', sans-serif;
+        font-family: Consolas;
     }
     .d-flex {
         display: flex;
