@@ -12,8 +12,7 @@ namespace SistemaVentasJones.Shared
         public string NombreyApellido { get; set; }
         public string Apellido { get; set; }
         // buscar algún regex de cédula
-        [RegularExpression("[0-9]{13}[A-Z]{1}",
-            ErrorMessage = "El término introducido no corresponde la formato de cédula nicaragüense")]
+        [RegularExpression(@"^\d{3}-\d{6}-\d{4}[A-Z]$", ErrorMessage = "El formato de la cédula no es válido.")]
         public string Cedula { get; set; }
         public virtual List<Venta> Ventas { get; set; }
         //public virtual List<Pago> Pagos { get; set; }

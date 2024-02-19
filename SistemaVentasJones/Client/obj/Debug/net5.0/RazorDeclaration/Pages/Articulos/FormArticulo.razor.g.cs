@@ -248,7 +248,7 @@ using System.Text.Json;
         }
 
     }
-    // obteniendo las tallas
+   
    
 
 #line default

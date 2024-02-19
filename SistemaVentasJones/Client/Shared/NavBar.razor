@@ -32,7 +32,7 @@
         <MudNavLink Href="/lista-articulos" Icon="@Icons.Filled.AddShoppingCart">Administracion de productos</MudNavLink>
                    
             <MudNavLink Href="/lista-ventas" Icon="@Icons.Filled.ShoppingBag">Ventas</MudNavLink>
-        @*<MudNavLink Href="/lista-devoluciones">Devoluciones</MudNavLink>*@
+        <MudNavLink Href="/lista-devoluciones">Devoluciones</MudNavLink>*
         
         <AuthorizeView Roles="admin">
             <Authorized>
@@ -55,6 +55,7 @@
 </MudPaper>
 
 <style>
+
     mud-appbar {
         width: 100%;
         display: flex;
@@ -68,8 +69,8 @@
         transition: margin 225ms cubic-bezier(0,0,.2,1) 0ms,width 225ms cubic-bezier(0,0,.2,1) 0ms;
     }
     .custom-menu {
-        background-color: #604ce4; /* Dark blue color, you can change this */
-        color: #fff; /* Text color */
+        background-color: #5f0507; /* Dark blue color, you can change this */
+        color: #e3d7d7; /* Text color */
         /* Add any additional styles as needed */
     }
 
@@ -86,6 +87,9 @@
                 background-color: #8B0000; /* Dark red on click, you can change this */
             }
 
+    .navbar-toggler {
+        background-color: #5f0507; /* Cambia el color del botón toggler a azul */
+    }
     .mud-avatar-img {
         width: 60px;
         height: 60px;

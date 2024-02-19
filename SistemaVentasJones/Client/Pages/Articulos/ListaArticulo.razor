@@ -17,7 +17,7 @@
     </AuthorizeView>
 
     <div class="row">
-        <div class="col-3">
+      @*  <div class="col-3">
             <select class="form-control" @bind="MarcaIdFiltro" @onblur="Filtrar">
                 <option value="0">--Seleccione una marca--</option>
                 @foreach (var item in ListaMarcas)
@@ -25,7 +25,7 @@
                     <option value="@item.Id">@item.Nombre</option>
                 }
             </select>
-        </div>
+        </div>*@
 
         <div class="col-3">
             <select class="form-control" @bind="CategoriaIdFiltro" @onblur="Filtrar">
@@ -37,7 +37,7 @@
             </select>
         </div>
 
-        <div class="col-3">
+       @* <div class="col-3">
             <select class="form-control" @bind="TamanioIdFiltro" @onblur="Filtrar">
                 <option value="0">--Seleccione un tamaño--</option>
                 @foreach (var item in ListaTamanios)
@@ -46,7 +46,7 @@
                 }
             </select>
         </div>
-
+*@
         <div class="col-3">
             <button @onclick="LimpiarTodo" class="btn btn-danger" type="button"><i class="oi oi-delete"></i></button>
         </div>

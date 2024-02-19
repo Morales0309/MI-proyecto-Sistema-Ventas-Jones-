@@ -2,7 +2,7 @@
 <MudLayout>
     <MudDrawer @bind-Open="_sidebarOpen" Elevation="1">
        
-        <AppBar OnSidebarToggled="ToggleSidebar" OnThemeToggled="ToggleTheme" />
+        <AppBar OnSidebarToggled="ToggleSidebar"  OnThemeToggled="ToggleTheme" />
         <AuthorizeView>
             <Authorized>
                 <NavBar SideBarOpen="_sidebarOpen" />

@@ -44,7 +44,7 @@
                     <label class="col-4 col-form-label">Cédula</label>
                     <div class="col">
                         <div class="input-group">
-                            <MudTextField @bind-Value="@applicationUser.Cedula" Label="Cédula" Variant="Variant.Outlined" oninput="this.value=this.value.toUpperCase()"
+                            <MudTextField @bind-Value="@applicationUser.Cedula" Label="Formato de Cedula: 000-000000-0000A" Variant="Variant.Outlined" oninput="this.value=this.value.toUpperCase()"
                                           Margin="Margin.Dense"></MudTextField>
                             <ValidationMessage For="@(() => applicationUser.Cedula)" />
                         </div>
