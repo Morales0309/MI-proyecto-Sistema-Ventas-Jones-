@@ -1,15 +1,15 @@
-﻿<MudPaper Width="250px" Class="d-inline-flex py-3" Elevation="0">
+﻿<MudPaper style="background-color: #5f0507; color: #ffffff;" Width="250px" Class="d-inline-flex py-3" Elevation="0">
 
 
     <MudNavMenu Rounded="true" Margin="Margin.Dense" Color="Color.Dark" Class="mud-width-full custom-menu">
         <MudText Typo="Typo.h6" Class="px-4">Sistema ventas Jones</MudText>
         <MudDivider Class="my-2" />
 
-        <MudNavLink Href="/" Icon="@Icons.Filled.Dashboard">Reportes</MudNavLink>
+        <MudNavLink IconColor="Color.Surface" Href="/" Icon="@Icons.Filled.Dashboard">Reportes</MudNavLink>
 
         <AuthorizeView Roles="admin">
             <Authorized>         
-                <MudNavLink Href="/lista-compras" Icon="@Icons.Filled.ShoppingBag">Compras</MudNavLink>
+                <MudNavLink IconColor="Color.Surface" Href="/lista-compras" Icon="@Icons.Filled.ShoppingBag">Compras</MudNavLink>
             </Authorized>
         </AuthorizeView>
 
@@ -19,7 +19,7 @@
        <AuthorizeView Roles="admin">
             <Authorized>
                
-                <MudNavGroup Title="Catálogos" Icon="@Icons.Filled.AccountTree" Expanded="true">
+                <MudNavGroup IconColor="Color.Surface" Title="Catálogos" Icon="@Icons.Filled.AccountTree" Expanded="true">
                     <MudNavLink Href="/lista-marcas">Marcas</MudNavLink>                   
                     <MudNavLink Href="/lista-tamanios">Tamaños</MudNavLink>
                     <MudNavLink Href="/indexcategoria">Categorías</MudNavLink>
@@ -29,10 +29,10 @@
             </Authorized>
         </AuthorizeView>
 
-        <MudNavLink Href="/lista-articulos" Icon="@Icons.Filled.AddShoppingCart">Administracion de productos</MudNavLink>
+        <MudNavLink IconColor="Color.Surface" Href="/lista-articulos" Icon="@Icons.Filled.AddShoppingCart">Administracion de productos</MudNavLink>
                    
-            <MudNavLink Href="/lista-ventas" Icon="@Icons.Filled.ShoppingBag">Ventas</MudNavLink>
-        <MudNavLink Href="/lista-devoluciones">Devoluciones</MudNavLink>*
+            <MudNavLink IconColor="Color.Surface" Href="/lista-ventas" Icon="@Icons.Filled.ShoppingBag">Ventas</MudNavLink>
+
         
         <AuthorizeView Roles="admin">
             <Authorized>
@@ -42,7 +42,7 @@
 
         <AuthorizeView Roles="admin">
             <Authorized>
-                <MudNavGroup Title="Ajustes" Icon="@Icons.Filled.Settings" Expanded="true">
+                <MudNavGroup IconColor="Color.Surface" Title="Ajustes" Icon="@Icons.Filled.Settings" Expanded="true">
                     <MudNavLink Href="/lista-usuarios">Usuarios</MudNavLink>
                     <MudNavLink Href="/roles">Asignar Roles</MudNavLink>
                     <MudNavLink Href="/lista-ajustes">Configuracion</MudNavLink>

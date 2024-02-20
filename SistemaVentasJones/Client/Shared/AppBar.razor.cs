@@ -41,7 +41,7 @@ namespace SistemaVentasJones.Client.Shared
                     AppbarText = "#ffffffb3",
                     DrawerBackground = "#27272f",
                     DrawerText = "#ffffffb3",
-                    DrawerIcon = "#ffffffb3"
+                    DrawerIcon = "#ffffffb3",
                 }
             };
     }

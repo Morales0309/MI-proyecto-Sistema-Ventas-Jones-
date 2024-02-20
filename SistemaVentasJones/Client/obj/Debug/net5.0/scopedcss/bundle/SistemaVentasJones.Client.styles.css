@@ -173,6 +173,13 @@ hr[b-vhb7ajvgqo] {
         display:none
     }
 }
+/* /Shared/AppBar.razor.rz.scp.css */
+body[b-rtqd8sysku] {
+    background:#4cff00;
+}
+.color-barra[b-rtqd8sysku] {
+    background: !important #000;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-rk5j625f0h] {
     position: relative;

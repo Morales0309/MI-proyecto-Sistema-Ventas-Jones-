@@ -46,10 +46,20 @@
             </div>            
         </div>
 
-
+        <div class="form-group row">
+            <label class="col-3 col-form-label">Ciudad</label>
+            <div class="col">
+                <div class="input-group">
+                    <MudTextField @bind-Value="@cliente.Ciudad" Label="Ciudad"
+                                  Variant="Variant.Outlined"
+                                  Margin="Margin.Dense"></MudTextField>
+                    <ValidationMessage For="@(() => cliente.Ciudad)" />
+                </div>
+            </div>
+        </div>
 
         <div class="form-group row">
-            <label class="col-3 col-form-label">Dirección*</label>
+            <label class="col-3 col-form-label">Dirección</label>
             <div class="col">
                 <div class="input-group">
                    <MudTextField @bind-Value="@cliente.Dirección" Label="Dirección"

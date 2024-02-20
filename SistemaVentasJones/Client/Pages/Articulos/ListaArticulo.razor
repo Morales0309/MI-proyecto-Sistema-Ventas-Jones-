@@ -125,9 +125,9 @@ else
                         <p class="card-text">
                             PRECIO: <b>C$@articulo.PrecioUnitario</b>
                             <br />
-                            @if (articulo.StockActual < articulo.StockMinimo)
+                            @if (articulo.StockActual > articulo.StockMinimo)
                             {
-                                <b style="color:red; font-weight:700">STOCK BAJO: @articulo.StockActual</b>
+                                <b style="color:red; font-weight:700">STOCK BAJO: @articulo.StockActual</b>                           
                             }
                             else if (articulo.StockActual > articulo.StockMaximo)
                             {
@@ -143,6 +143,7 @@ else
             </a>
         }
     </div>
+
     <div hidden="@card">
         <MudTable Items="@articulo" Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Filter="new Func<Articulo,bool>(FilterFunc1)"
               @bind-SelectedItem="selectedItem1">
@@ -179,7 +180,8 @@ else
                 <MudTd>
                     @if (context.StockActual < context.StockMinimo)
                     {
-                        <div class="chip chip-low">@context.StockActual</div>
+                        @*<div class="chip chip-low">@context.StockActual</div>*@
+                        <MudChip Color="Color.Secondary">@context.StockActual</MudChip>
                     }
                     else if (context.StockActual > context.StockMaximo)
                     {
@@ -188,8 +190,8 @@ else
                     }
                     else
                     {
-                        @* <b><MudTd class="chip chip-normal" DataLabel="Stock"> @context.StockActual</MudTd></b> *@
-                        <div class="chip chip-normal">@context.StockActual</div>
+                        @* <b><MudTd class="chip chip-normal" DataLabel="Stock"> @context.StockActual</MudTd></b> *@                 
+                        <MudChip Color="Color.Success">@context.StockActual</MudChip>
                     }
                 </MudTd>
                 <AuthorizeView Roles="admin">

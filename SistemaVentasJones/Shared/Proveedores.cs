@@ -22,7 +22,12 @@ namespace SistemaVentasJones.Shared
         [MaxLength(20, ErrorMessage = "Máximo 20 caracteres"), MinLength(2, ErrorMessage = "Minimo 2 caracteres")]
         [Phone]
         public string Telefono { get; set; }
-       
+
+        [Required(ErrorMessage = "Ingresa un texto váñido")]
+        [StringLength(500)]
+        [MaxLength(500, ErrorMessage = "Máximo 500 dígitos"), MinLength(2, ErrorMessage = "Minimo 2 dígitos")]
+        public string Ciudad { get; set; }
+
         [StringLength(500)]
         [MaxLength(500, ErrorMessage = "Máximo 500 dígitos"), MinLength(2, ErrorMessage = "Minimo 2 dígitos")]
         public string Direccion { get; set; }
