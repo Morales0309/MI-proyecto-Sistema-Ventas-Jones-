@@ -7,7 +7,7 @@
 @using System.Text.Json
 
 <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Create" Color="Color.Success" Size="Size.Medium">
-    <a style="text-decoration:none; color:#fff;"  @onclick="CrearArticulo">Agregar proveedor</a>
+    <a style="text-decoration:none; color:#fff;" @onclick="CrearArticulo">Agregar proveedor</a>
 </MudButton>
 
 <div class="d-flex justify-content-between mt-2 mb-2">
@@ -37,10 +37,10 @@ else
     <MudButtonGroup Color="Color.Primary" Variant="Variant.Outlined">
         <MudTooltip Text="Exportar esta tabla a excel" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
             <MudButton Variant="Variant.Filled" StartIcon="@Icons.Custom.FileFormats.FileExcel"
-                   @onclick="ExportarExcel"
-                   Color="Color.Warning">Excel</MudButton>
+                       @onclick="ExportarExcel"
+                       Color="Color.Warning">Excel</MudButton>
         </MudTooltip>
-       
+
     </MudButtonGroup>
     <MudTable Items="@Proveedores" Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Filter="new Func<Proveedores,bool>(FilterFunc1)"
               @bind-SelectedItem="selectedItem1">
@@ -54,7 +54,6 @@ else
             <MudTh>Nombre</MudTh>
             <MudTh>Teléfono</MudTh>
             <MudTh>Email</MudTh>
-            <MudTh>Ciudad</MudTh>
             <MudTh>Dirección</MudTh>
             <MudTh>Fecha registro</MudTh>
             <MudTh Style="width:70px;">Acciones</MudTh>
@@ -64,7 +63,6 @@ else
             <MudTd DataLabel="Nombre">@context.Nombre</MudTd>
             <MudTd DataLabel="Teléfono">@context.Telefono</MudTd>
             <MudTd DataLabel="Email">@context.Email</MudTd>
-            <MudTd DataLabel="Ciudad">@context.Ciudad</MudTd>
             <MudTd DataLabel="Dirección">@context.Direccion</MudTd>
             <MudTd DataLabel="Fecha">@context.Fecha.ToLongDateString()</MudTd>
             <MudTd>
@@ -158,8 +156,8 @@ else
 
         return false;
     }
-    
-    
+
+
     private void ExportarExcel()
     {
         using (var package = new ExcelPackage())
@@ -186,7 +184,7 @@ else
                 r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                 r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightYellow);
             }
-    
+
 
             var header = worksheet.Cells["A3:F3"];
             worksheet.DefaultColWidth = 32;
@@ -210,5 +208,5 @@ else
             JS.GuardarComo($"Informe_Proveedores_{DateTime.Now.ToShortDateString()}.xlsx", package.GetAsByteArray());
         }
     }
-    
+
 }

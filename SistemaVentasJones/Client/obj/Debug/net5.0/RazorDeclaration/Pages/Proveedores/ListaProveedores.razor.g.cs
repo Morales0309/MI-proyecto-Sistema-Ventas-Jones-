@@ -189,7 +189,7 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 83 "C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Proveedores\ListaProveedores.razor"
+#line 81 "C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Proveedores\ListaProveedores.razor"
        
     private bool dense = false;
     private bool hover = true;
@@ -268,8 +268,8 @@ using System.Text.Json;
 
         return false;
     }
-    
-    
+
+
     private void ExportarExcel()
     {
         using (var package = new ExcelPackage())
@@ -296,7 +296,7 @@ using System.Text.Json;
                 r.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                 r.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightYellow);
             }
-    
+
 
             var header = worksheet.Cells["A3:F3"];
             worksheet.DefaultColWidth = 32;
@@ -320,7 +320,7 @@ using System.Text.Json;
             JS.GuardarComo($"Informe_Proveedores_{DateTime.Now.ToShortDateString()}.xlsx", package.GetAsByteArray());
         }
     }
-    
+
 
 #line default
 #line hidden

@@ -1,0 +1,393 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\articulos\\listaarticulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\articulos\\listaarticulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\proveedores\\listaproveedores.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\proveedores\\listaproveedores.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\articulos\\formularioarticulos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\articulos\\formularioarticulos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\articulos\\formarticulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\articulos\\formarticulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\articulos\\creararticulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\articulos\\creararticulo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\ventas\\formventa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\ventas\\formventa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D361612C-DFE5-4CB7-A00F-ED1B9DA4672F}|SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\server\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D361612C-DFE5-4CB7-A00F-ED1B9DA4672F}|SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj|solutionrelative:sistemaventasjones\\server\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D361612C-DFE5-4CB7-A00F-ED1B9DA4672F}|SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\server\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D361612C-DFE5-4CB7-A00F-ED1B9DA4672F}|SistemaVentasJones\\Server\\SistemaVentasJones.Server.csproj|solutionrelative:sistemaventasjones\\server\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\shared\\navbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\shared\\navbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\proveedores\\listaproveedoresbajas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\proveedores\\listaproveedoresbajas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\proveedores\\crearproveedores.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\proveedores\\crearproveedores.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\compras\\listacompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\compras\\listacompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\compras\\vercompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\compras\\vercompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\compras\\formcompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\compras\\formcompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\compras\\formcompra.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\compras\\formcompra.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\pages\\compras\\crearcompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\pages\\compras\\crearcompra.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\shared\\appbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\shared\\appbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\shared\\appbar.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\shared\\appbar.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\shared\\appbar.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\shared\\appbar.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\client\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C4E46E2-F799-4BC3-8D81-6AB8079DBAC2}|SistemaVentasJones\\Client\\SistemaVentasJones.Client.csproj|solutionrelative:sistemaventasjones\\client\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B64F8E0-13C5-46E5-B276-F7F65E77BFE0}|SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj|c:\\users\\lenovo i5 12va gen\\desktop\\nueva carpeta (2)\\mi-proyecto-sistema-ventas-jones-\\sistemaventasjones\\shared\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B64F8E0-13C5-46E5-B276-F7F65E77BFE0}|SistemaVentasJones\\Shared\\SistemaVentasJones.Shared.csproj|solutionrelative:sistemaventasjones\\shared\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormularioArticulos.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\FormularioArticulos.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Articulos\\FormularioArticulos.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\FormularioArticulos.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Articulos\\FormularioArticulos.razor",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAwJQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-24T14:39:43.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormVenta.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Ventas\\FormVenta.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Ventas\\FormVenta.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Ventas\\FormVenta.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Ventas\\FormVenta.razor",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-24T14:38:34.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAAAEoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-21T19:43:35.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ListaProveedoresBajas.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedoresBajas.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedoresBajas.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedoresBajas.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedoresBajas.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T21:20:03.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListaProveedores.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedores.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedores.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedores.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Proveedores\\ListaProveedores.razor",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T21:20:04.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListaArticulo.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\ListaArticulo.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Articulos\\ListaArticulo.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\ListaArticulo.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Articulos\\ListaArticulo.razor",
+              "ViewState": "AQIAALQAAAAAAAAAAAAAAMYAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:32:44.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CrearArticulo.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\CrearArticulo.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Articulos\\CrearArticulo.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\CrearArticulo.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Articulos\\CrearArticulo.razor",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-24T14:39:03.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormArticulo.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\FormArticulo.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Articulos\\FormArticulo.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Articulos\\FormArticulo.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Articulos\\FormArticulo.razor",
+              "ViewState": "AQIAAOgAAAAAAAAAAAAowAMBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-24T14:39:12.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CrearProveedores.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Proveedores\\CrearProveedores.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Proveedores\\CrearProveedores.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Proveedores\\CrearProveedores.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Proveedores\\CrearProveedores.razor",
+              "ViewState": "AQIAABQAAAAAAAAAAAAUwC0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T21:19:44.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ListaCompra.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\ListaCompra.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Compras\\ListaCompra.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\ListaCompra.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Compras\\ListaCompra.razor",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:39:42.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NavBar.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\NavBar.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Shared\\NavBar.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\NavBar.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Shared\\NavBar.razor",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:32:44.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "SistemaVentasJones\\Server\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T22:16:07.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormCompra.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:39:34.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormCompra.razor.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor.css",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor.css",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor.css",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Compras\\FormCompra.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-02-20T19:39:32.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CrearCompra.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\CrearCompra.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Compras\\CrearCompra.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\CrearCompra.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Compras\\CrearCompra.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:39:09.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Shared\\NavMenu.razor",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAABQAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:32:44.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\wwwroot\\index.html",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\wwwroot\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-02-20T19:32:44.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "VerCompra.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\VerCompra.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Pages\\Compras\\VerCompra.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Pages\\Compras\\VerCompra.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Pages\\Compras\\VerCompra.razor",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:39:36.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AppBar.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\AppBar.razor.cs",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Shared\\AppBar.razor.cs",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\AppBar.razor.cs",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Shared\\AppBar.razor.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T19:32:44.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppBar.razor.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\AppBar.razor.css",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Shared\\AppBar.razor.css",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\AppBar.razor.css",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Shared\\AppBar.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-02-20T19:32:44.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppBar.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\AppBar.razor",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\Shared\\AppBar.razor",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\Shared\\AppBar.razor",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\Shared\\AppBar.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T19:32:44.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Client\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Client\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "SistemaVentasJones\\Client\\wwwroot\\css\\app.css",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-02-20T19:32:44.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\Articulo.cs",
+              "RelativeDocumentMoniker": "SistemaVentasJones\\Shared\\Articulo.cs",
+              "ToolTip": "C:\\Users\\Lenovo i5 12va Gen\\Desktop\\Nueva carpeta (2)\\MI-proyecto-Sistema-Ventas-Jones-\\SistemaVentasJones\\Shared\\Articulo.cs",
+              "RelativeToolTip": "SistemaVentasJones\\Shared\\Articulo.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAwwDEAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T19:32:44.312Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

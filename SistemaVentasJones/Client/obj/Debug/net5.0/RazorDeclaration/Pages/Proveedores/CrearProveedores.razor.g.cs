@@ -193,14 +193,14 @@ using Microsoft.JSInterop;
         if (respuesta.IsSuccessStatusCode)
         {
             NavigationManager.NavigateTo("/lista-proveedores"); //  cambiar a indexArticulo
-            // await JS.InvokeVoidAsync("simple", "¡Éxito!", "Proveedores agregado", "success"); 
-             Snackbar.Add("Agregada con éxito", Severity.Success, a => a.VisibleStateDuration = 200);
+                                                                // await JS.InvokeVoidAsync("simple", "¡Éxito!", "Proveedores agregado", "success");
+            Snackbar.Add("Agregada con éxito", Severity.Success, a => a.VisibleStateDuration = 200);
         }
         else
         {
             //await JS.InvokeVoidAsync("simple", "Error",
             //        "No se pudo crear este producto", "error");
-             Snackbar.Add("Ocurrió un error", Severity.Error, a => a.VisibleStateDuration = 200);
+            Snackbar.Add("Ocurrió un error", Severity.Error, a => a.VisibleStateDuration = 200);
         }
     }
 

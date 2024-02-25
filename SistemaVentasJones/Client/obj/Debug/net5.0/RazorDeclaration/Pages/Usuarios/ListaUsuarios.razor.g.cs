@@ -173,13 +173,6 @@ using System.Text.Json;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 5 "C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Usuarios\ListaUsuarios.razor"
-           [Authorize(Roles = "admin")]
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Components.RouteAttribute("/lista-usuarios")]
     public partial class ListaUsuarios : global::Microsoft.AspNetCore.Components.ComponentBase
     {

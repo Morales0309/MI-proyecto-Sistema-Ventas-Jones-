@@ -71,11 +71,11 @@
         </a>
     </div>
 
-    <div class="btn-group">
+   @*  <div class="btn-group">
         <button @onclick="CambiarVista" style="background:none; border: none">
             <b>Cambiar vista</b>
         </button>
-    </div>
+    </div> *@
 </div>
 
 @if (articulo == null)
@@ -127,15 +127,16 @@ else
                             <br />
                             @if (articulo.StockActual > articulo.StockMinimo)
                             {
-                                <b style="color:red; font-weight:700">STOCK BAJO: @articulo.StockActual</b>                           
-                            }
-                            else if (articulo.StockActual > articulo.StockMaximo)
-                            {
-                                <b style="color:#9C27B0">STOCK EXCEDIDO: @articulo.StockActual</b>
+                                <MudTooltip Text="Stock bajo" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
+                                    <b style="color:red; font-weight:700">STOCK BAJO: @articulo.StockActual</b>
+                                </MudTooltip>
                             }
                             else
                             {
-                                <b style="color:green">STOCK: @articulo.StockActual</b>
+                                
+                                <MudTooltip Text="Stock normal" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
+                                    <b style="color:green">STOCK: @articulo.StockActual</b>
+                                </MudTooltip>
                             }
                         </p>
                     </div>
@@ -181,7 +182,10 @@ else
                     @if (context.StockActual < context.StockMinimo)
                     {
                         @*<div class="chip chip-low">@context.StockActual</div>*@
-                        <MudChip Color="Color.Secondary">@context.StockActual</MudChip>
+                        
+                        <MudTooltip Text="Stock bajo" Color="Color.Error" Placement="Placement.Bottom" Arrow="true">
+                            <MudChip Color="Color.Error">@context.StockActual</MudChip>
+                        </MudTooltip>
                     }
                     else if (context.StockActual > context.StockMaximo)
                     {
@@ -191,7 +195,10 @@ else
                     else
                     {
                         @* <b><MudTd class="chip chip-normal" DataLabel="Stock"> @context.StockActual</MudTd></b> *@                 
-                        <MudChip Color="Color.Success">@context.StockActual</MudChip>
+                        
+                        <MudTooltip Text="Stock normal" Color="Color.Success" Placement="Placement.Bottom" Arrow="true">
+                            <MudChip Color="Color.Success">@context.StockActual</MudChip>
+                        </MudTooltip>
                     }
                 </MudTd>
                 <AuthorizeView Roles="admin">

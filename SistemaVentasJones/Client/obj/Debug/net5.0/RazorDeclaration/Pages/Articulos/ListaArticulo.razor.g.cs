@@ -189,7 +189,7 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 215 "C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Articulos\ListaArticulo.razor"
+#line 222 "C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Pages\Articulos\ListaArticulo.razor"
        
     public List<Articulo> articulo { get; set; } //muestra todos los articulos
     public List<Categoria> ListaCategorias { get; set; } = new List<Categoria>();
