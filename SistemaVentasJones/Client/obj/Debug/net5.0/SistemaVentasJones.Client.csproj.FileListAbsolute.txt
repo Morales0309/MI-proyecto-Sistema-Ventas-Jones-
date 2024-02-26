@@ -5499,7 +5499,6 @@ C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVenta
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\wwCw2d7P.gz
-C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\EGLwQSDV.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\WI1yNIyz.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\V3D6f93v.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\0f6hyg3I.gz
@@ -5530,12 +5529,9 @@ C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVenta
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\lHvzhC8O.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\o0+9+v1+.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\EVeGGs6n.gz
-C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\1A8SMeLC.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\4OaT+y++.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\vnb+Gvc1.gz
-C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\OFuB5We6.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\bjpT3s59.gz
-C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\fo3QL0vP.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\swrUPdxa.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\fVTBU1IV.gz
 C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\6YRHYg79.gz
@@ -6561,3 +6557,7 @@ C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta (2)\MI-proyecto-Sistema-Ventas
 C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta (2)\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\refint\SistemaVentasJones.Client.dll
 C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta (2)\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\SistemaVentasJones.Client.pdb
 C:\Users\Lenovo i5 12va Gen\Desktop\Nueva carpeta (2)\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\ref\SistemaVentasJones.Client.dll
+C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\xqTGjWYP.gz
+C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\ULVMdlMi.gz
+C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\Wezm18R8.gz
+C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\obj\Debug\net5.0\build-gz\Klz40f16.gz
