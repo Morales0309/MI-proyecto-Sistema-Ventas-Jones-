@@ -6,24 +6,6 @@
 
 <EditForm Model="@venta" OnValidSubmit="OnValidSubmit">
     <div class="form-field mt-2 mb-2">
-        @*<div class="form-group row">
-            <MudGrid>
-    <MudItem sm="12" md="6">
-                    <MudRadioGroup T="FormasPago" @bind-Value="venta.FormaPago" Orientation="Orientation.Horizontal">
-                        @foreach (FormasPago fpago in Enum.GetValues(typeof(FormasPago)))
-                        {
-                            <MudTooltip Text="Seleccione la moneda en que desea facturar el cliente" Color="Color.Tertiary" Placement="Placement.Bottom" Arrow="true">
-                                <MudRadio Color="Color.Tertiary" Size="Size.Large" T="FormasPago" Label="@fpago.ToString()" Value="@fpago" Checked="@IsFormaPagoSelected(fpago)" @oninput="(() => HandleFormaPagoChange(fpago))">
-                                    <span>@fpago.ToString()</span>
-                                </MudRadio>
-                            </MudTooltip>                            
-                        }
-                    </MudRadioGroup>
-            </MudItem>
-            </MudGrid>
-        </div>*@
-
-
         <div class="form-group row" hidden="@ocultaclientes">
             <label class="col-3 col-form-label">Cliente</label>
             <div class="col">

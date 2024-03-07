@@ -22,17 +22,17 @@ namespace SistemaVentasJones.Shared
         [MaxLength(500, ErrorMessage = "Máximo 500 dígitos"), MinLength(2, ErrorMessage = "Minimo 2 dígitos")]
         public string? Descripcion { get; set; }
         
-        public string? Url_Imagen { get; set; }      
+        public string? Url_Imagen { get; set; }
 
-        [Required]
+        
         [Column(TypeName = "decimal(10,2)")]
-        [Range(1, double.MaxValue, ErrorMessage = "Valor inválido")]
-        public decimal PrecioMayorista { get; set; }
+        [Range(0, double.MaxValue, ErrorMessage = "Valor inválido")]
+        public decimal PrecioMayorista { get; set; } = 0;
 
-        [Required]
+       
         [Column(TypeName = "decimal(10,2)")]
-        [Range(1, double.MaxValue, ErrorMessage = "Valor inválido")]
-        public decimal PrecioUnitario { get; set; }
+        [Range(0, double.MaxValue, ErrorMessage = "Valor inválido")]
+        public decimal PrecioUnitario { get; set; } = 0;
 
         public DateTime Ultima_Modificación { get; set; }
         [StringLength(50)]
@@ -47,7 +47,7 @@ namespace SistemaVentasJones.Shared
         public int StockActual { get; set; } = 0;
 
         [Required]
-        [Range(1, int.MaxValue, ErrorMessage = "Valor inválido")]
+        [Range(0, int.MaxValue, ErrorMessage = "Valor inválido")]
         public int StockMaximo
         { get { return  StockMaximo = StockActual; } // le agrega una unidad más al stock actual en la casilla de stock máximo
             set { }
