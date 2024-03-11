@@ -174,7 +174,7 @@ using Microsoft.JSInterop;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 98 "C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Shared\NavBar.razor"
+#line 81 "C:\Users\ender\OneDrive\Imágenes\MI-proyecto-Sistema-Ventas-Jones-\SistemaVentasJones\Client\Shared\NavBar.razor"
        
     [Parameter]
     public bool SideBarOpen { get; set; }   

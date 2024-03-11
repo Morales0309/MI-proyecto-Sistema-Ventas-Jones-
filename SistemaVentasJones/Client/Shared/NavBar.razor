@@ -1,4 +1,4 @@
-﻿<MudPaper style="background-color: #5f0507; color: #ffffff;" Width="250px" Class="d-inline-flex py-3" Elevation="0">
+﻿<MudPaper Width="250px" Class="d-inline-flex py-3" Elevation="0">
 
 
     <MudNavMenu Rounded="true" Margin="Margin.Dense" Color="Color.Dark" Class="mud-width-full custom-menu">
@@ -20,9 +20,9 @@
             <Authorized>
                
                 <MudNavGroup IconColor="Color.Surface" Title="Catálogos" Icon="@Icons.Filled.AccountTree" Expanded="true">
-                    <MudNavLink Href="/lista-marcas">Marcas</MudNavLink>                   
-                    <MudNavLink Href="/lista-tamanios">Tamaños</MudNavLink>
-                    <MudNavLink Href="/indexcategoria">Categorías</MudNavLink>
+                    <MudNavLink Href="/lista-marcas" Match="NavLinkMatch.Prefix">Marcas</MudNavLink>
+                    <MudNavLink Href="/lista-tamanios" Match="NavLinkMatch.Prefix">Tamaños</MudNavLink>
+                    <MudNavLink Href="/indexcategoria" Match="NavLinkMatch.Prefix">Categorías</MudNavLink>
                     <MudNavLink Color="Color.Primary" Href="/lista-clientes">Clientes</MudNavLink>
                     <MudNavLink Href="/lista-proveedores">Proveedores</MudNavLink>
                 </MudNavGroup>
@@ -55,7 +55,6 @@
 </MudPaper>
 
 <style>
-
     mud-appbar {
         width: 100%;
         display: flex;
@@ -68,31 +67,15 @@
         background-color: mediumpurple;
         transition: margin 225ms cubic-bezier(0,0,.2,1) 0ms,width 225ms cubic-bezier(0,0,.2,1) 0ms;
     }
+
     .custom-menu {
         background-color: #5f0507; /* Dark blue color, you can change this */
         color: #e3d7d7; /* Text color */
         /* Add any additional styles as needed */
     }
-
-        .custom-menu a {
-            color: #fff; /* Link color */
-            transition: background-color 0.3s; /* Agregamos una transición suave al color de fondo */
-        }
-
-            .custom-menu a:hover {
-                background-color: #FFFFFF; /* Darker blue on hover, you can change this */
-            }
-
-            .custom-menu a:active {
-                background-color: #8B0000; /* Dark red on click, you can change this */
-            }
-
-    .navbar-toggler {
-        background-color: #5f0507; /* Cambia el color del botón toggler a azul */
-    }
-    .mud-avatar-img {
-        width: 60px;
-        height: 60px;
+    /* Add hover effect to MudNavLink */
+    .mud-nav-link:hover, .mud-nav-link:active{
+        color: blue !important; /* Change the text color to blue on hover */
     }
 </style>
 @code {
